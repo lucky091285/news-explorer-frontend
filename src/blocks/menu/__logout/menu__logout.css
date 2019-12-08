@@ -1,0 +1,10 @@
+.menu__logout {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  background-image: url(../../../images/logout_white.svg);
+}
+
+.menu__logout.menu__logout_black {
+  background-image: url(../../../images/logout_black.svg);
+}

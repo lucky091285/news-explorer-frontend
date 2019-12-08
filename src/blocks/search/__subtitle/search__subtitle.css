@@ -1,0 +1,22 @@
+.search__subtitle {
+  width: 545px;
+  font-family: "Roboto";
+  margin: 0 0 64px;
+  font-size: 1.125rem;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1023px) {
+  .search__subtitle {
+    width: 452px;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__subtitle {
+    width: 288px;
+    margin-bottom: 122px;
+  }
+}
