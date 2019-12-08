@@ -11,6 +11,8 @@ dist
 # Optional npm cache directory
 .npm
 
+.vscode
+
 # Optional REPL history
 .DS_Store
 .idea
