@@ -1,0 +1,20 @@
+.saved-papers__keywords {
+  font-family: "Roboto";
+  color: black;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 30px 0 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .saved-papers__keywords {
+    margin-top: 16px;
+    font-size: 0.87rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .saved-papers__keywords {
+    font-size: 1.125rem;
+  }
+}

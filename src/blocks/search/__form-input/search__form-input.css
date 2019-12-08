@@ -1,0 +1,20 @@
+.search__form-input {
+  margin-left: 30px;
+  background-color: white;
+  box-sizing: border-box;
+  border: 0px;
+  width: 73%;
+  padding: 0;
+  font-family: "Roboto";
+  font-size: 1rem;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .search__form-input {
+    width: 100%;
+    margin-left: 0;
+    padding: 16px 20px;
+    border-radius: 100px;
+  }
+}

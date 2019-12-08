@@ -1,0 +1,31 @@
+.card__auth {
+  position: absolute;
+  max-width: 50%;
+  height: 40px;
+  top: 24px;
+  right: 70px;
+  padding: 0 12px 0 12px;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-align: center;
+  color: black;
+  align-items: center;
+  margin: 0;
+  display: flex;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__auth {
+    top: 8px;
+    right: 54px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card__auth {
+    top: 16px;
+    right: 64px;
+  }
+}

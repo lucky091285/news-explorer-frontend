@@ -1,0 +1,13 @@
+.card__text {
+  font-family: "Roboto";
+  margin: 16px 0 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__text {
+    margin-top: 10px;
+  }
+}
+

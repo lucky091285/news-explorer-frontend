@@ -1,0 +1,18 @@
+.results__news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .results__news {
+    grid-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .results__news {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}

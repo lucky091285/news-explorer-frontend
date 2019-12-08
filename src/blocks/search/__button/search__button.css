@@ -1,0 +1,34 @@
+.button.search__button {
+  width: 30%;
+  background-color: #2F71E5;
+  color: white;
+  border: 0;
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.button.results__button:hover {
+  background-color: #347EFF;
+}
+
+@media screen and (max-width: 1023px) {
+  .button.search__button {
+    width: 45%;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .button.search__button {
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 1.125rem;
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}

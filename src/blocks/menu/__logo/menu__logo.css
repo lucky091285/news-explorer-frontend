@@ -1,0 +1,27 @@
+.menu__logo {
+  color: white;
+  margin: 30px 0 26px 104px;
+  text-decoration: none;
+  font-family: "Roboto Slab";
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+  align-self: center;
+}
+
+.menu__logo.menu__logo_black {
+  color: black;
+}
+
+@media screen and (max-width: 1023px) {
+  .menu__logo {
+    margin: 22px 0 19px 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu__logo {
+    margin: 16px 0 16px 16px;
+    font-size: 1rem;
+  }
+}

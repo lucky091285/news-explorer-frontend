@@ -1,0 +1,9 @@
+@import url(../../vendor/fonts.css);
+@import url(../../blocks/header/header.css);
+@import url(../../blocks/menu/menu.css);
+@import url(../../blocks/common/footer/footer.css);
+@import url(../../blocks/common/wrapper.css);
+@import url(../../blocks/saved-papers/saved-papers.css);
+@import url(../../blocks/storage/storage.css);
+@import url(../../blocks/common/card/card.css);
+@import url(../../blocks/common/auth-form/auth-form.css);

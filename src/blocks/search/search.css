@@ -1,0 +1,28 @@
+@import url(__title/search__title.css);
+@import url(__subtitle/search__subtitle.css);
+@import url(__cover/search__cover.css);
+@import url(__form/search__form.css);
+@import url(__form-input/search__form-input.css);
+@import url(__button/search__button.css);
+
+.search {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  width: 608px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .search {
+    padding: 38px 0 48px;
+    width: 448px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search {
+    padding: 30px 0 32px;
+    width: 288px;
+  }
+}

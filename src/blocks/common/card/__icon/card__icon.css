@@ -1,0 +1,36 @@
+@import url(./_logged/card__icon_logged.css);
+@import url(./_marked/card__icon_marked.css);
+@import url(./_delete/card__icon_delete.css);
+
+.card__icon {
+  background-image: url(../../../../images/bookmark/normal.svg);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+}
+
+.card__icon:hover {
+  background-image: url(../../../../images/bookmark/hover.svg);
+}
+
+.card__icon:hover ~ .card__balloon {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1023px) {
+  .card__icon {
+    right: 8px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card__icon {
+    right: 16px;
+    top: 16px;
+  }
+}
