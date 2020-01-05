@@ -10,6 +10,7 @@
   box-shadow: inset 0px -1px 0px #d1d2d6;
   justify-content: space-between;
   z-index: 10;
+  padding: 0 104px;
 }
 
 .menu_on-top {
@@ -25,11 +26,13 @@
 @media screen and (max-width: 1023px) {
   .menu {
     height: 66px;
+    padding: 0 40px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .menu {
     height: 56px;
+    padding: 0 16px;
   }
 }

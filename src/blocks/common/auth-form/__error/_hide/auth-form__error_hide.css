@@ -1,0 +1,4 @@
+.auth-form__error.auth-form__error_hide {
+  opacity: 0;
+  transition: 0.3s;
+}

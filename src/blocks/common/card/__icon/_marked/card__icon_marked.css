@@ -2,6 +2,6 @@
   background-image: url(../../../../../images/bookmark/marked.svg);
 }
 
-.card__icon.card__icon_marked:hover ~ .card__warning {
+.card__icon.card__icon_marked:hover ~ .card__auth {
   opacity: 0;
 }

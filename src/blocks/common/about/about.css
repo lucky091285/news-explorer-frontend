@@ -5,6 +5,7 @@
 .about {
   display: flex;
   padding: 80px 104px;
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 1023px) {

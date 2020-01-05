@@ -1,5 +1,5 @@
 .auth-form__input {
-  font-family: Roboto;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 0.87rem;
   width: 100%;
   margin: 9px 0 3px 0;
@@ -12,5 +12,9 @@
 }
 
 .auth-form__input::placeholder {
+  color: #cccccc;
+}
+
+.auth-form__input:disabled {
   color: #cccccc;
 }

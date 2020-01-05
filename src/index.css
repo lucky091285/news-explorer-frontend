@@ -9,4 +9,5 @@
 @import url(blocks/common/card/card.css);
 @import url(blocks/common/footer/footer.css);
 @import url(blocks/common/auth-form/auth-form.css);
+@import url(blocks/common/popup/popup.css);
 @import url(blocks/common/preloader/preloader.css);

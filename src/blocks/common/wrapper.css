@@ -4,12 +4,12 @@ body {
   padding: 0;
 }
 
-.root {
+.page {
   margin: 0 auto;
   padding: 0;
   max-width: 1440px;
   background-color: white;
-  min-height: 100vh;
+  min-height: auto;
   min-width: 320px;
   font-family: "Roboto", sans-serif;
   -moz-osx-font-smoothing: grayscale;

@@ -1,5 +1,6 @@
 .results__button {
   border-radius: 80px;
+  font-family: "Roboto", "Arial", sans-serif;
   margin: 64px auto 0;
   background-color: white;
   color: black;
@@ -11,7 +12,7 @@
 }
 
 .button.results__button:hover {
-  background-color: gray;
+  opacity: 0.9;
 }
 
 

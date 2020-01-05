@@ -3,7 +3,7 @@
   background-color: #2F71E5;
   color: white;
   border: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 1.125rem;
   padding-top: 21px;
   padding-bottom: 21px;
@@ -11,8 +11,12 @@
   cursor: pointer;
 }
 
-.button.results__button:hover {
+.button.search__button:hover {
   background-color: #347EFF;
+}
+
+.button.search__button:active {
+  background-color: #2A65CC;
 }
 
 @media screen and (max-width: 1023px) {

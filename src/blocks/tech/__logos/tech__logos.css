@@ -10,6 +10,7 @@
   .tech__logos {
     margin-top: 40px;
     margin-right: 0;
+    padding: 0;
   }
 }
 
@@ -19,5 +20,6 @@
     column-gap: 40px;
     row-gap: 40px;
     justify-items: center;
+    padding: 0;
   }
 }
