@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Diplom Yandex Praktikum">
+  <meta name="author" content="Dmitry Gavrilov">
+  <title>News Explorer / Сохраненные статьи</title>
+  <link rel="stylesheet" href="../style.4e0974ccf2cf2f24c56c.css">
+  <link rel="icon" href="./images/favicon.png" type="image/png">
+</head>
+
+<body>
+  <div id="scroll" class="scroll-lock">
+    <div class="page">
+      <header class="header header_white">
+        <nav class="menu menu_black">
+          <a href="../" class="menu__logo menu__logo_black">News Explorer</a>
+          <div class="menu__mobile menu__mobile_black" id="mobile-menu"></div>
+          <ul class="menu__list">
+            <li class="menu__list-items"><a href="../" class="menu__link menu__link_black">Главная</a></li>
+            <li class="menu__list-items"><a href="../about/" class="menu__link menu__link_black">О проекте</a></li>
+            <li class="menu__list-items menu__list-items_selected-black" id="menu-saved-articles"><a href="./"
+                class="menu__link menu__link_selected-black">Сохраненные статьи</a></li>
+            <li class="menu__list-items">
+              <span class="menu__link menu__link_logged  menu__link_logged-black" id="user-area">
+                <span id="shown-user-name">Грета</span>
+                <span class="menu__logout menu__logout_black"></span>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="saved-papers">
+        <h5 class="saved-papers__subtitle">Сохранённые статьи</h5>
+        <h1 class="saved-papers__title">Грета, у вас 4 сохраненных статьи<span class="articles-sum"></span></h1>
+        <p class="saved-papers__keywords">
+          По ключевым словам: <b>Природа, Тайга<span class="first-word"></span><span class="second-word"></span></b><span
+            class="word-tail"> и <b>2 другим<span class="and-more"></span>
+              другим</b></span>
+        </p>
+      </section>
+      <main class="storage">
+        <!-- <template id="card-sample"> -->
+          <a href="#" class="card">
+            <div class="card__body-card">
+              <div class="card__pic"></div>
+              <div class="card__icon card__icon_delete"></div>
+              <p class="card__balloon">Убрать из сохраненных</p>
+              <p class="card__keyword">Тайга</p>
+              <div class="card__wrapper">
+                <p class="card__date">2 августа, 2019</p>
+                <h4 class="card__title">Национальное достояние – парки</h4>
+                <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                    система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+              </div>
+            </div>
+            <p class="card__src">ЛЕНТА.РУ</p>
+          </a>
+        <!-- </template> -->
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2019 ds33vladimir</p>
+        <nav>
+          <ul class="footer__menu">
+            <li class="footer__menu-item"><a href="../">Главная</a></li>
+            <li class="footer__menu-item"><a href="./">О проекте</a></li>
+            <li class="footer__menu-item"><a href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практикум</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__links">
+          <a href="https://github.com/lucky091285/" class="footer__icon" target="_blank">
+            <img src=".././images/git.svg" alt="GitHub Logo">
+          </a>
+          <a href="https://facebook.com" class="footer__icon" target="_blank">
+            <img src=".././images/facebook.svg" alt="Facebook Logo">
+          </a>
+        </p>
+      </footer>
+      <div id="service-area">
+        <section class="popup popup_hide" id="login-form">
+          <form class="auth-form" name="login">
+            <div class="auth-form__close" id="close-login-form"></div>
+            <h4 class="auth-form__title">Вход</h4>
+            <span class="auth-form__subtitle">E-mail</span>
+            <input class="auth-form__input" name="email" id="email" type="email" placeholder="Введите почту" required>
+            <span class="auth-form__error auth-form__error_hide" id="error-email">
+              Введите корректный адресe-mail
+            </span>
+            <span class="auth-form__subtitle">Пароль</span>
+            <input class="auth-form__input" name="password" id="error-password" type="password"
+              placeholder="Введите пароль" required>
+            <span class="auth-form__error auth-form__error_hide" id="error-password">
+              Поле не может быть пустым!
+            </span>
+            <span class="auth-form__error auth-form__error_usr-exists auth-form__error-message_hide" id="login-fatal">
+              Неправильный логин или пароль
+            </span>
+            <button class="button auth-form__button" name="login-button" type="submit" disabled>Войти</button>
+            <span class="auth-form__other-action">
+              или <span class="auth-form__other-action-click" id="open-signup-form">Зарегистрироваться</span>
+            </span>
+          </form>
+        </section>
+
+        <section class="popup popup_hide" id="signup-form">
+          <form class="auth-form" name="signup">
+            <div class="auth-form__close" id="close-signup-form"></div>
+            <h4 class="auth-form__title">Регистрация</h4>
+            <span class="auth-form__subtitle">E-mail</span>
+            <input class="auth-form__input" name="email" id="regemail" placeholder="Введите почту" type="email"
+              required>
+            <span class="auth-form__error auth-form__error_hide" id="error-regemail">Введите корректный адрес
+              e-mail</span>
+            <span class="auth-form__subtitle">Пароль</span>
+            <input class="auth-form__input" name="password" id="regpassword" type="password"
+              placeholder="Введите пароль" minlength="8" required>
+            <span class="auth-form__error auth-form__error_hide" id="error-regpassword">
+              Длина пароля должна быть 8 или более символов
+            </span>
+            <span class="auth-form__subtitle">Имя</span>
+            <input class="auth-form__input" name="username" id="regname" placeholder="Введите свое имя" required
+              minlength="2" pattern="[A-Za-zА-Яа-я]{2,}">
+            <span class="auth-form__error auth-form__error_hide" id="error-regname">
+              Имя должно и содержать только буквы
+            </span>
+            <span class="auth-form__error auth-form__error_usr-exists auth-form__error_hide" id="signup-fatal">
+              Такой пользователь уже есть
+            </span>
+            <button class="button auth-form__button" name="signup-button" type="submit">Зарегистрироваться</button>
+            <span class="auth-form__other-action">
+              или <span class="auth-form__other-action-click" id="open-login-form">Войти</span>
+            </span>
+          </form>
+        </section>
+
+        <section class="popup popup_hide" id="signup-ok">
+          <form class="auth-form">
+            <div class="auth-form__close" id="close-signup-ok-form"></div>
+            <h4 class="auth-form__title">Пользователь успешно зарегистрирован!</h4>
+            <span class="auth-form__other-action auth-form__other-action_left">
+              <span class="auth-form__other-action-click" id="open-login-modal">Выполнить вход</span>
+            </span>
+          </form>
+        </section>
+        <!-- add class "overlay_on" to show overlay -->
+        <div class="overlay"></div>
+        <div class="sys-error" id="system-error">
+          <div class="sys-error__close"></div>
+          <p class="sys-error__message" id="system-error-message"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../articles/articles.28f998dd28000a6c3a03.js"></script>
+  <!-- <button class="button">Text</button>
+      <button class="button" disabled>Text</button> -->
+</body>
