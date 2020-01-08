@@ -6,5 +6,5 @@
 }
 
 .preloader__message_hide {
-  display: flex;
+  display: none;
 }

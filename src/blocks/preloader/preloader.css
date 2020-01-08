@@ -2,6 +2,7 @@
 @import url(__subtitle/preloader__subtitle.css);
 @import url(__message/preloader__message.css);
 @import url(__icon/preloader__icon.css);
+
 .preloader {
   display: flex;
   align-items: center;

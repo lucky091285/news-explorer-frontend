@@ -26,7 +26,7 @@
                 class="menu__link menu__link_selected-black">Сохраненные статьи</a></li>
             <li class="menu__list-items">
               <span class="menu__link menu__link_logged  menu__link_logged-black" id="user-area">
-                <span id="shown-user-name">Грета</span>
+                <span id="show-user-name"></span>
                 <span class="menu__logout menu__logout_black"></span>
               </span>
             </li>
@@ -35,31 +35,30 @@
       </header>
       <section class="saved-papers">
         <h5 class="saved-papers__subtitle">Сохранённые статьи</h5>
-        <h1 class="saved-papers__title">Грета, у вас 4 сохраненных статьи<span class="articles-sum"></span></h1>
+        <h1 class="saved-papers__title">, у вас <span class="articles-sum"></span></h1>
         <p class="saved-papers__keywords">
-          По ключевым словам: <b>Природа, Тайга<span class="first-word"></span><span class="second-word"></span></b><span
-            class="word-tail"> и <b>2 другим<span class="and-more"></span>
+          По ключевым словам: <b><span class="first-word"></span><span class="second-word"></span></b><span
+            class="word-tail"> и <b><span class="and-more"></span>
               другим</b></span>
         </p>
       </section>
       <main class="storage">
-        <!-- <template id="card-sample"> -->
+        <template id="card-sample">
           <a href="#" class="card">
             <div class="card__body-card">
               <div class="card__pic"></div>
               <div class="card__icon card__icon_delete"></div>
               <p class="card__balloon">Убрать из сохраненных</p>
-              <p class="card__keyword">Тайга</p>
+              <p class="card__keyword"></p>
               <div class="card__wrapper">
-                <p class="card__date">2 августа, 2019</p>
-                <h4 class="card__title">Национальное достояние – парки</h4>
-                <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-                    система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <p class="card__date"></p>
+                <h4 class="card__title"></h4>
+                <p class="card__text"></p>
               </div>
             </div>
             <p class="card__src">ЛЕНТА.РУ</p>
           </a>
-        <!-- </template> -->
+        </template>
       </main>
       <footer class="footer">
         <p class="footer__copyright">© 2019 ds33vladimir</p>
@@ -99,7 +98,7 @@
             <span class="auth-form__error auth-form__error_usr-exists auth-form__error-message_hide" id="login-fatal">
               Неправильный логин или пароль
             </span>
-            <button class="button auth-form__button" name="login-button" type="submit" disabled>Войти</button>
+            <button class="button auth-form__button" name="login-button" type="submit">Войти</button>
             <span class="auth-form__other-action">
               или <span class="auth-form__other-action-click" id="open-signup-form">Зарегистрироваться</span>
             </span>

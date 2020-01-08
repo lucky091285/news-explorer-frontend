@@ -32,7 +32,22 @@ module.exports = {
           'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
           {
             loader: 'image-webpack-loader',
-            options: {},
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 85,
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: 90,
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+            },
           },
 
         ],
@@ -79,16 +94,19 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      hash: true,
       template: './src/index.html',
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      hash: true,
       template: './src/pages/articles/index.html',
       filename: 'articles/index.html',
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      hash: true,
       template: './src/pages/about/index.html',
       filename: 'about/index.html',
     }),

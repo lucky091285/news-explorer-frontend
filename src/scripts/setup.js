@@ -4,7 +4,7 @@ import ModalOperator from '../blocks/common/modaloperator';
 import AuthForm from '../blocks/common/auth-form/auth-form';
 import ShowError from '../blocks/common/error/error';
 import ApiBackend from './api-backend';
-import MainMenuShow from './main-menu-show';
+import MainMenuRender from './main-menu-render';
 
 const initUI = () => {
   const modalOperator = new ModalOperator(document.body, document.querySelector('#scroll'));
@@ -35,7 +35,7 @@ const initUI = () => {
     showError,
   );
 
-  const userMenu = new MainMenuShow(
+  const userMenu = new MainMenuRender(
     loginForm.open.bind(loginForm),
     apiBackend.logout.bind(apiBackend),
     showError,

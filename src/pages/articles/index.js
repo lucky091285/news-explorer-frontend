@@ -2,12 +2,20 @@
 import '../../vendor/normalize.css';
 import './index.css';
 /* eslint-disable no-unused-vars */
+import config from '../../scripts/config';
+/* eslint-disable no-unused-vars */
 import { menuOperator, mainMenu } from '../../blocks/menu/menu';
-import modalOperator from '../../blocks/common/modaloperator';
-import Card from '../../blocks/common/card/card';
-import { loginForm, signupForm, regCompleteForm } from '../../blocks/common/auth-form/auth-form';
+import initUI from '../../scripts/setup';
+import Collection from '../../scripts/collection';
 
-const cardIconDelete = new Card(document.querySelector('.storage'));
+const pageUI = initUI();
+
+const myCollection = new Collection(
+  pageUI.apiBackend.getAllArticles.bind(pageUI.apiBackend),
+  pageUI.apiBackend.deleteArticle.bind(pageUI.apiBackend),
+  config,
+  pageUI.showError,
+);
 // Methods
 
 window.onresize = () => {

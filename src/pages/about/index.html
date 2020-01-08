@@ -29,7 +29,7 @@
             </li>
             <li class="menu__list-items">
               <span class="menu__link menu__link_logged  menu__link_logged-black" id="user-area">
-                <span id="shown-user-name">Грета</span>
+                <span id="show-user-name"></span>
                 <span class="menu__logout menu__logout_black"></span>
               </span>
             </li>
@@ -85,65 +85,26 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <!-- <template id="commit-sample"> -->
+              <template id="commit-sample">
                 <div class="swiper-slide">
                   <div class="slider__commit-card">
-                    <p class="slider__commit-date">14 августа, 2019</p>
+                    <p class="slider__commit-date"></p>
                     <div class="slider__commit-person">
-                      <img class="slider__commit-image" src="../<%= require('../../images/ava.jpg')%>" alt="Фото из GitHub">
+                      <img class="slider__commit-image" src="" alt="Фото из GitHub">
                       <div>
-                        <h4 class="slider__commit-name">1. Антон Долинин</h4>
-                        <p class="slider__commit-email">anton@yandex.ru</p>
+                        <h4 class="slider__commit-name"></h4>
+                        <p class="slider__commit-email"></p>
                       </div>
                     </div>
-                    <p class="slider__commit-text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                    <p class="slider__commit-text"></p>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slider__commit-card">
-                      <p class="slider__commit-date">14 августа, 2019</p>
-                      <div class="slider__commit-person">
-                        <img class="slider__commit-image" src="../<%= require('../../images/ava.jpg')%>" alt="Фото из GitHub">
-                        <div>
-                          <h4 class="slider__commit-name">1. Антон Долинин</h4>
-                          <p class="slider__commit-email">anton@yandex.ru</p>
-                        </div>
-                      </div>
-                      <p class="slider__commit-text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="slider__commit-card">
-                        <p class="slider__commit-date">14 августа, 2019</p>
-                        <div class="slider__commit-person">
-                          <img class="slider__commit-image" src="../<%= require('../../images/ava.jpg')%>" alt="Фото из GitHub">
-                          <div>
-                            <h4 class="slider__commit-name">1. Антон Долинин</h4>
-                            <p class="slider__commit-email">anton@yandex.ru</p>
-                          </div>
-                        </div>
-                        <p class="slider__commit-text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider__commit-card">
-                          <p class="slider__commit-date">14 августа, 2019</p>
-                          <div class="slider__commit-person">
-                            <img class="slider__commit-image" src="../<%= require('../../images/ava.jpg')%>" alt="Фото из GitHub">
-                            <div>
-                              <h4 class="slider__commit-name">1. Антон Долинин</h4>
-                              <p class="slider__commit-email">anton@yandex.ru</p>
-                            </div>
-                          </div>
-                          <p class="slider__commit-text">Emmet (formerly Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                        </div>
-                      </div>
-              <!-- </template> -->
+              </template>
             </div>
             <div class="swiper-pagination"></div>
           </div>
           <div class="swiper-button-next next"></div>
-          <a class="button slider__git-button" href="https://github.com/lucky091285/">Открыть в GitHub</a>
+          <a class="button slider__git-button" href="https://github.com/lucky091285/" target="_blank">Открыть в GitHub</a>
         </section>
         <footer class="footer">
           <p class="footer__copyright">© 2019 ds33vladimir</p>
@@ -184,7 +145,7 @@
               <span class="auth-form__error auth-form__error_usr-exists auth-form__error-message_hide" id="login-fatal">
                 Неправильный логин или пароль
               </span>
-              <button class="button auth-form__button" name="login-button" type="submit" disabled>Войти</button>
+              <button class="button auth-form__button" name="login-button" type="submit">Войти</button>
               <span class="auth-form__other-action">
                 или <span class="auth-form__other-action-click" id="open-signup-form">Зарегистрироваться</span>
               </span>
