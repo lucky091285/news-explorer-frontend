@@ -1,3 +1,5 @@
+/* eslint-disable prefer-template */
+/* eslint-disable no-path-concat */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -32,22 +34,7 @@ module.exports = {
           'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
           {
             loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 85,
-              },
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: 90,
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-            },
+            options: {},
           },
 
         ],
@@ -71,7 +58,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               config: {
-                path: `${__dirname}/postcss.config.js`,
+                path: __dirname + '/postcss.config.js',
               },
             },
           },
