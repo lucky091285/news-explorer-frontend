@@ -9,6 +9,7 @@ const config = {
   maxGitCommits: 15,
   month: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа',
     'сентября', 'октября', 'ноября', 'декабря'],
+  sevenDays: (7 * 24 * 3600 * 1000),
   newsFeed: 'https://newsapi.org/v2/everything?sortBy=popularity&apiKey=32d93de8aad245a2986cdb37bec3d666&language=ru&pageSize=100',
   results: {
     showStep: 3,
@@ -30,7 +31,7 @@ const config = {
     title: '.card__title',
     text: '.card__text',
     src: '.card__src',
-    warning: '.card__auth',
+    auth: '.card__auth',
     keyword: '.card__keyword',
     icon: {
       node: '.card__icon',

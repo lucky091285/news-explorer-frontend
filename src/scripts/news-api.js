@@ -1,13 +1,14 @@
+/* eslint-disable no-shadow */
 /* eslint-disable no-undef */
 export default class NewsApi {
-  constructor(newsFeed) {
+  constructor(newsFeed, sevenDays) {
     this.newsFeed = newsFeed;
+    this.sevenDays = sevenDays;
   }
 
   getNews(query) {
     const dateNow = new Date();
-    const sevenDays = 7 * 24 * 3600 * 1000;
-    const dateWeekAgo = new Date(dateNow - sevenDays);
+    const dateWeekAgo = new Date(dateNow - this.sevenDays);
     const dateTo = `${dateNow.getFullYear()}-${dateNow.getMonth() + 1}-${dateNow.getDate()}`;
     const dateFrom = `${dateWeekAgo.getFullYear()}-${dateWeekAgo.getMonth() + 1}-${dateWeekAgo.getDate()}`;
     const url = `${this.newsFeed}&q=${query}&from=${dateFrom}&to=${dateTo}`;
@@ -18,17 +19,18 @@ export default class NewsApi {
       })
       .then((data) => {
         const news = [];
-        for (let i = 0; i < data.articles.length; i += 1) {
+        // eslint-disable-next-line arrow-spacing
+        data.articles.forEach((item)=> {
           news.push({
-            source: data.articles[i].source.name,
-            title: data.articles[i].title,
-            date: new Date(Date.parse(data.articles[i].publishedAt)),
-            text: data.articles[i].description,
-            image: data.articles[i].urlToImage,
-            link: data.articles[i].url,
+            source: item.source.name,
+            title: item.title,
+            date: new Date(Date.parse(item.publishedAt)),
+            text: item.description,
+            image: item.urlToImage,
+            link: item.url,
             keyword: query,
           });
-        }
+        });
         return news;
       })
       .catch((err) => {

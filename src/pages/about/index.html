@@ -132,7 +132,7 @@
               <div class="auth-form__close" id="close-login-form"></div>
               <h4 class="auth-form__title">Вход</h4>
               <span class="auth-form__subtitle">E-mail</span>
-              <input class="auth-form__input" name="email" id="email" type="email" placeholder="Введите почту" required>
+              <input class="auth-form__input" name="email" pattern="^[a-zA-Z0-9]\w*@\w+\.\w{2,6}" id="email" type="email" placeholder="Введите почту" required>
               <span class="auth-form__error auth-form__error_hide" id="error-email">
                 Введите корректный адресe-mail
               </span>
@@ -142,7 +142,7 @@
               <span class="auth-form__error auth-form__error_hide" id="error-password">
                 Поле не может быть пустым!
               </span>
-              <span class="auth-form__error auth-form__error_usr-exists auth-form__error-message_hide" id="login-fatal">
+              <span class="auth-form__error auth-form__error_usr-exists auth-form__error_hide" id="login-fatal">
                 Неправильный логин или пароль
               </span>
               <button class="button auth-form__button" name="login-button" type="submit">Войти</button>
@@ -157,7 +157,7 @@
               <div class="auth-form__close" id="close-signup-form"></div>
               <h4 class="auth-form__title">Регистрация</h4>
               <span class="auth-form__subtitle">E-mail</span>
-              <input class="auth-form__input" name="email" id="regemail" placeholder="Введите почту" type="email"
+              <input class="auth-form__input" name="email" pattern="^[a-zA-Z0-9]\w*@\w+\.\w{2,6}" id="regemail" placeholder="Введите почту" type="email"
                 required>
               <span class="auth-form__error auth-form__error_hide" id="error-regemail">Введите корректный адрес
                 e-mail</span>
