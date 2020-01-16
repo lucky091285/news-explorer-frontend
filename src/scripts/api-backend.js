@@ -20,7 +20,7 @@ export default class ApiBackend {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
       })
       .then((res) => {
@@ -39,7 +39,7 @@ export default class ApiBackend {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
         body: JSON.stringify(data),
       })
@@ -71,7 +71,7 @@ export default class ApiBackend {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
         body: JSON.stringify(data),
       })
@@ -93,7 +93,7 @@ export default class ApiBackend {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
         body: JSON.stringify(data),
       })
@@ -114,7 +114,7 @@ export default class ApiBackend {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
       })
       .then((res) => {
@@ -133,7 +133,7 @@ export default class ApiBackend {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
       })
       .then((res) => {
