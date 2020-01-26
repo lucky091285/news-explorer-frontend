@@ -1,10 +1,11 @@
 .preloader__subtitle {
   color: #B6BCBF;
-  font-family: Roboto;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 1.125rem;
   max-width: 356px;
   margin: 0;
   text-align: center;
   box-sizing: border-box;
   padding: 0 20px;
+  margin-top: 24px;
 }

@@ -5,10 +5,12 @@
 
 .menu__link {
   align-self: center;
+  font-family: "Roboto",sans-serif;
   text-decoration: none;
   color: #b6bcbf;
   font-size: 1.125rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .menu__link:hover {

@@ -1,13 +1,18 @@
-/* eslint-disable import/no-unresolved */
 /* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
 import '../../vendor/normalize.css';
-import './index.css';
 import '../../../node_modules/swiper/css/swiper.min.css';
-
+import './index.css';
 import Swiper from 'swiper';
-import { mainMenu } from '../../blocks/menu/menu';
+import config from '../../scripts/config';
+import { menuOperator, mainMenu } from '../../blocks/menu/menu';
+import initUI from '../../scripts/setup';
+import CommitsLoader from '../../scripts/commits-loader';
+import CommitsRender from '../../scripts/commits-render';
 
-// eslint-disable-next-line no-unused-vars
+const pageUI = initUI();
+
 const swiper = new Swiper('.swiper-container', {
   updateOnWindowResize: true,
   slidesPerView: 3,
@@ -40,6 +45,15 @@ const swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const commitsLoader = new CommitsLoader(config.git, config.maxGitCommits);
+const commitsRender = new CommitsRender(
+  swiper.update.bind(swiper),
+  commitsLoader.getCommits.bind(commitsLoader),
+  config,
+);
+
+commitsRender.init();
 
 window.onresize = () => {
   if (window.innerWidth > 767) mainMenu.close();

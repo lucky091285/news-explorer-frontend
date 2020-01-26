@@ -3,9 +3,10 @@
 @import url(../../blocks/common/footer/footer.css);
 @import url(../../blocks/client/client.css);
 @import url(../../blocks/tech/tech.css);
+@import url(../../blocks/common/wrapper.css);
 @import url(../../blocks/common/about/about.css);
 @import url(../../blocks/slider/slider.css);
 @import url(../../blocks/common/body-noscroll/body-noscroll.css);
-@import url(../../blocks/common/button/button.css);
 @import url(../../blocks/menu/menu.css);
 @import url(../../blocks/common/auth-form/auth-form.css);
+@import url(../../blocks/common/button/button.css);

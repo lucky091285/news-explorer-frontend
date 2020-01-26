@@ -1,3 +1,5 @@
+@import url(./_visible/card__auth_visible.css);
+
 .card__auth {
   position: absolute;
   max-width: 50%;
@@ -13,6 +15,7 @@
   color: black;
   align-items: center;
   margin: 0;
+  opacity: 0;
   display: flex;
 }
 

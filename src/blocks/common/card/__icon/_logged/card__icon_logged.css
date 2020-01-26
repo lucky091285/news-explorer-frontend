@@ -1,3 +1,3 @@
-.card__icon.card__icon_logged:hover ~ .card__warning {
+.card__icon.card__icon_logged:hover ~ .card__auth {
   opacity: 0;
 }

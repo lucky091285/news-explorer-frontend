@@ -1,18 +1,18 @@
 @import url(./__button/auth-form__button.css);
-@import url(./__error-message/auth-form__error-message.css);
+@import url(./__error/auth-form__error.css);
 @import url(./__input/auth-form__input.css);
 @import url(./__link/auth-form__link.css);
-@import url(./__wrapper/auth-form__wrapper.css);
 @import url(./__title/auth-form__title.css);
 @import url(./__close/auth-form__close.css);
 @import url(./__subtitle/auth-form__subtitle.css);
 @import url(./__other-action/auth-form__other-action.css);
+@import url(../popup/popup.css);
 
 .auth-form {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 30px 36px 28px 36px;

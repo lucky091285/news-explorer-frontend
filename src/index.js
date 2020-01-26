@@ -1,20 +1,24 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-unused-vars */
-/* eslint-disable import/named */
 /* eslint-disable no-undef */
-import './index.css';
+/* eslint-disable no-unused-vars */
 import './vendor/normalize.css';
-// eslint-disable-next-line no-unused-vars
+import './index.css';
+import config from './scripts/config';
 import { menuOperator, mainMenu } from './blocks/menu/menu';
-import modalOperator from './blocks/common/modaloperator';
-import Card from './blocks/common/card/card';
-import { loginForm, signupForm, regCompleteForm } from './blocks/common/auth-form/auth-form';
+import initUI from './scripts/setup';
+import NewsApi from './scripts/news-api';
+import NewsRender from './scripts/news-render';
 
-const cardIconSave = new Card(document.querySelector('.results'));
+const pageUI = initUI();
 
-// Methods
+const newsApi = new NewsApi(config.newsFeed, config.newsFeed);
 
-regCompleteForm.open();
+const newsRender = new NewsRender(
+  newsApi.getNews.bind(newsApi),
+  pageUI.apiBackend.saveArticle.bind(pageUI.apiBackend),
+  pageUI.apiBackend.deleteArticle.bind(pageUI.apiBackend),
+  pageUI.showError,
+  config,
+);
 
 window.onresize = () => {
   if (window.innerWidth > 767) mainMenu.close();

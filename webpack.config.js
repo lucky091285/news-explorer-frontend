@@ -1,8 +1,11 @@
+/* eslint-disable prefer-template */
+/* eslint-disable no-path-concat */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 module.exports = {
@@ -42,26 +45,55 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'], // добавили минификацию CSS
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: '../' },
+          },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: __dirname + '/postcss.config.js',
+              },
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({ //
-      filename: 'style.[contenthash].css',
+      filename: 'css/style.[contenthash].css',
+    }),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      // eslint-disable-next-line global-require
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true,
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      hash: true,
       template: './src/index.html',
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      hash: true,
       template: './src/pages/articles/index.html',
       filename: 'articles/index.html',
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      hash: true,
       template: './src/pages/about/index.html',
       filename: 'about/index.html',
     }),

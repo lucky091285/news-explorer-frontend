@@ -16,7 +16,7 @@
   background-image: url(../../../../images/bookmark/hover.svg);
 }
 
-.card__icon:hover ~ .card__balloon {
+.card__icon:hover ~ .card__auth {
   opacity: 1;
   transition: 0.3s;
 }
