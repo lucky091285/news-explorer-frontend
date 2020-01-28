@@ -11,13 +11,12 @@ button.results__button {
   cursor: pointer;
 }
 
-.button.results__button:hover {
-  opacity: 0.9;
+.button.results__button.results__button_hide {
+  display: none;
 }
 
-
 .button.results__button:active {
-  background-color: #e8e8e9;
+  opacity: 0.9;
 }
 
 @media screen and (max-width: 1023px) {

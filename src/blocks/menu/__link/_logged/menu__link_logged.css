@@ -1,9 +1,13 @@
 .menu__link.menu__link_logged {
   display: flex;
   border-radius: 100px;
-  border: 1px solid #fff;
+  border: 1px solid #b6bcbf;
   color: #fff;
   padding: 8px 15px;
+}
+
+.menu__link.menu__link_logged:hover {
+  border: 1px solid #fff;
 }
 
 .menu__link.menu__link_logged.menu__link_logged-black {

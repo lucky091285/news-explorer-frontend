@@ -1,6 +1,7 @@
 @import url(./__news/results__news.css);
 @import url(./__title/results__title.css);
 @import url(./__button/results__button.css);
+@import url(./_hide/results_hide.css);
 
 .results {
   display: flex;
@@ -8,10 +9,6 @@
   box-sizing: border-box;
   padding: 80px 104px;
   background: #F5F6F7;
-}
-
-.results_hide {
-  display: none;
 }
 
 @media screen and (max-width: 1023px) {
