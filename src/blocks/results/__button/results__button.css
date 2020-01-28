@@ -12,6 +12,14 @@
   cursor: pointer;
 }
 
+.button.results__button.results__button_hide {
+  display: none;
+}
+
+.results__button:hover {
+  opacity: 0.9;
+}
+
 .button.results__button:active {
   background-color: #e8e8e9;
 }
