@@ -1,3 +1,5 @@
+@import url(./_on/overlay_on.css);
+
 .overlay {
   position: fixed;
   top: 0;
@@ -10,8 +12,4 @@
   display: none;
   overflow-y: hidden;
   z-index: 100;
-}
-
-.overlay_on {
-  display: flex;
 }

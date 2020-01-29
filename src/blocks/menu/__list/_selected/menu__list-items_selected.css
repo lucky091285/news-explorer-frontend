@@ -1,36 +1,21 @@
 .menu__list-items.menu__list-items_selected{
   border-bottom: #fff 2px solid;
-  height: 80px;
-}
-
-@media screen and (max-width: 1023px) {
-  .menu__list-items.menu__list-items_selected {
-    height: 66px;
-  }
 }
 
 @media screen and (max-width: 767px) {
   .menu__list-items.menu__list-items_selected {
     border: 0;
-    height: 42px;
   }
 }
 
 .menu__list-items.menu__list-items_selected-black {
   border-bottom: 3px black solid;
-  height: 80px;
 }
 
 @media screen and (max-width: 767px) {
   .menu__list-items.menu__list-items_selected-black {
     border: 0;
-    height: 42px;
 
   }
 }
 
-@media screen and (max-width: 1023px) {
-  .menu__list-items.menu__list-items_selected-black {
-    height: 66px;
-  }
-}

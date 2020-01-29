@@ -4,7 +4,3 @@
   margin-left: 4px;
   background-image: url(../../../images/logout_white.svg);
 }
-
-.menu__logout.menu__logout_black {
-  background-image: url(../../../images/logout_black.svg);
-}

@@ -1,3 +1,5 @@
+@import url(./_hide/circle-preloader_hide.css);
+
 .circle-preloader {
   display: block;
   width: 74px;
@@ -9,10 +11,6 @@
   margin: auto;
 
   animation: spin 0.75s infinite linear;
-}
-
-.circle-preloader_hide {
-  display: none;
 }
 
 @keyframes spin {

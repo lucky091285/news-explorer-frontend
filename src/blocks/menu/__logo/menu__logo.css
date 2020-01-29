@@ -1,3 +1,5 @@
+@import url(./_black/menu__logo_black.css);
+
 .menu__logo {
   color: white;
   margin: 30px 0 26px;
@@ -8,10 +10,6 @@
   line-height: 1;
   align-self: center;
   z-index: 101;
-}
-
-.menu__logo.menu__logo_black {
-  color: black;
 }
 
 @media screen and (max-width: 1023px) {
