@@ -1,4 +1,6 @@
-button.results__button {
+@import url(./_hide/results__button_hide.css);
+
+.button.results__button {
   border-radius: 80px;
   font-family: "Roboto", "Arial", sans-serif;
   margin: 64px auto 0;
@@ -11,12 +13,8 @@ button.results__button {
   cursor: pointer;
 }
 
-.button.results__button.results__button_hide {
-  display: none;
-}
-
-button.results__button:hover {
-  opacity: 0.9;
+.button.results__button:active {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 1023px) {

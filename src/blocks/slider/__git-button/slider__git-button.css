@@ -8,6 +8,7 @@
   box-sizing: border-box;
   text-align: center;
   font-weight: 900;
+  text-decoration: none;
 }
 
 .button.slider__git-button:hover {

@@ -1,0 +1,23 @@
+.slider__title {
+  font-family: "Roboto Slab", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+  margin: 0 0 64px;
+}
+
+@media screen and (max-width: 1279px) {
+  .slider__title {
+    font-size: 1.875rem;
+    width: 336px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider__title {
+    box-sizing: border-box;
+    padding-right: 140px;
+    margin-bottom: 16px;
+  }
+}

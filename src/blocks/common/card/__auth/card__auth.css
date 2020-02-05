@@ -1,3 +1,5 @@
+@import url(./_visible/card__auth_visible.css);
+
 .card__auth {
   position: absolute;
   max-width: 50%;
@@ -14,6 +16,7 @@
   align-items: center;
   margin: 0;
   display: flex;
+  opacity: 0;
 }
 
 @media screen and (max-width: 1023px) {

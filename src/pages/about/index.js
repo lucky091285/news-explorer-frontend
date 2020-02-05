@@ -1,8 +1,8 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-undef */
 import '../../vendor/normalize.css';
-import './index.css';
 import '../../../node_modules/swiper/css/swiper.min.css';
+import './index.css';
 
 import Swiper from 'swiper';
 import { mainMenu } from '../../blocks/menu/menu';

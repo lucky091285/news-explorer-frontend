@@ -2,7 +2,7 @@
   font-family: "Roboto Slab", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 46px;
   color: #1a1b22;
   width: 334px;
@@ -11,7 +11,7 @@
 
 @media screen and (max-width: 1023px) {
   .tech__title {
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 34px;
     padding: 0;
   }

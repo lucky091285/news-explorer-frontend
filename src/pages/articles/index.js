@@ -5,7 +5,7 @@ import './index.css';
 import { menuOperator, mainMenu } from '../../blocks/menu/menu';
 import modalOperator from '../../blocks/common/modaloperator';
 import Card from '../../blocks/common/card/card';
-import { loginForm, signupForm, regCompleteForm } from '../../blocks/common/auth-form/auth-form';
+// import { loginForm, signupForm, regCompleteForm } from '../../blocks/common/auth-form/auth-form';
 
 const cardIconDelete = new Card(document.querySelector('.storage'));
 // Methods

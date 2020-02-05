@@ -1,3 +1,5 @@
+/* eslint-disable prefer-template */
+/* eslint-disable no-path-concat */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -56,7 +58,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               config: {
-                path: `${__dirname}/postcss.config.js`,
+                path: __dirname + '/postcss.config.js',
               },
             },
           },
@@ -66,7 +68,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({ //
-      filename: 'style.[contenthash].css',
+      filename: 'css/style.[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
