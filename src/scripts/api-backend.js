@@ -52,7 +52,7 @@ export default class ApiBackend {
       });
   }
 
-  getUserName() {
+  getUser() {
     return fetch(this._getUser, { credentials: 'include' })
       .then((res) => {
         if (!res.ok) throw new Error(`Ошибка чтения ${res.status}`);
