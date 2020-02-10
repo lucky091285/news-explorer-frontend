@@ -7,6 +7,9 @@
 @import url(./__commit-person/slider__commit-person.css);
 @import url(./__commit-text/slider__commit-text.css);
 @import url(./__git-button/slider__git-button.css);
+@import url(./__header/slider__header.css);
+@import url(./__title/slider__title.css);
+@import url(./__subtitle/slider__subtitle.css);
 
 .slider {
   position: relative;

@@ -1,6 +1,6 @@
 @import url(./_hide/results__button_hide.css);
 
-.button.results__button {
+.results__button {
   border-radius: 80px;
   font-family: "Roboto", "Arial", sans-serif;
   margin: 64px auto 0;
@@ -23,14 +23,14 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .button.results__button {
+  .results__button {
     margin-top: 22px;
     padding: 16px 60px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .button.results__button {
+  .results__button {
     width: 100%;
     margin: 15px 0 0;
   }
