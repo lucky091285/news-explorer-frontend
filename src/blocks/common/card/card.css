@@ -7,7 +7,6 @@
 @import url(./__body-card/card__body-card.css);
 @import url(./__auth/card__auth.css);
 @import url(./__wrapper/card__wrapper.css);
-@import url(./__baloon/card__balloon.css);
 @import url(./__keyword/card__keyword.css);
 
 .card {
