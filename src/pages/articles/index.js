@@ -16,7 +16,6 @@ const myCollection = new Collection(
   config,
   pageUI.showError,
 );
-// Methods
 
 window.onresize = () => {
   if (window.innerWidth > 767) mainMenu.close();
