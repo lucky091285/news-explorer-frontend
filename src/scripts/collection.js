@@ -40,9 +40,9 @@ export default class Collection {
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
           this._collectionContainer.appendChild(this._buildCard(item));
-          console.log(res);
         });
         this._updateStatistics();
+        console.log(res);
       })
       .catch((err) => this.showError.show(err.message));
   }
