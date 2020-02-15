@@ -5,16 +5,16 @@ import './index.css';
 import config from '../../scripts/config';
 /* eslint-disable no-unused-vars */
 import { menuOperator, mainMenu } from '../../blocks/menu/menu';
-import initUI from '../../scripts/setup';
+import initInt from '../../scripts/setup';
 import Collection from '../../scripts/collection';
 
-const pageUI = initUI();
+const pageInt = initInt();
 
 const myCollection = new Collection(
-  pageUI.apiBackend.getAllArticles.bind(pageUI.apiBackend),
-  pageUI.apiBackend.deleteArticle.bind(pageUI.apiBackend),
+  pageInt.apiBackend.getAllArticles.bind(pageInt.apiBackend),
+  pageInt.apiBackend.deleteArticle.bind(pageInt.apiBackend),
   config,
-  pageUI.showError,
+  pageInt.showError,
 );
 
 window.onresize = () => {

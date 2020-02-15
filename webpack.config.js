@@ -17,7 +17,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     // eslint-disable-next-line no-confusing-arrow
-    filename: (chunkData) => chunkData.chunk.name === 'main' ? '[name].[hash].js' : '[name]/[name].[hash].js',
+    filename: (chunkData) => {
+      chunkData.chunk.name === 'main' ? '[name].[hash].js' : '[name]/[name].[hash].js',
+    }
   },
   module: {
     rules: [

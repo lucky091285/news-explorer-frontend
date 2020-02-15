@@ -7,11 +7,11 @@ import './index.css';
 import Swiper from 'swiper';
 import config from '../../scripts/config';
 import { menuOperator, mainMenu } from '../../blocks/menu/menu';
-import initUI from '../../scripts/setup';
+import initInt from '../../scripts/setup';
 import CommitsLoader from '../../scripts/commits-loader';
 import CommitsRender from '../../scripts/commits-render';
 
-const pageUI = initUI();
+const pageInt = initInt();
 
 const swiper = new Swiper('.swiper-container', {
   updateOnWindowResize: true,

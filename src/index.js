@@ -4,19 +4,19 @@ import './vendor/normalize.css';
 import './index.css';
 import config from './scripts/config';
 import { menuOperator, mainMenu } from './blocks/menu/menu';
-import initUI from './scripts/setup';
+import initInt from './scripts/setup';
 import NewsApi from './scripts/news-api';
 import NewsRender from './scripts/news-render';
 
-const pageUI = initUI();
+const pageInt = initInt();
 
 const newsApi = new NewsApi(config.newsFeed);
 
 const newsRender = new NewsRender(
   newsApi.getNews.bind(newsApi),
-  pageUI.apiBackend.saveArticle.bind(pageUI.apiBackend),
-  pageUI.apiBackend.deleteArticle.bind(pageUI.apiBackend),
-  pageUI.showError,
+  pageInt.apiBackend.saveArticle.bind(pageInt.apiBackend),
+  pageInt.apiBackend.deleteArticle.bind(pageInt.apiBackend),
+  pageInt.showError,
   config,
 );
 

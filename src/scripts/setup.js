@@ -6,7 +6,7 @@ import ShowError from '../blocks/common/error/error';
 import ApiBackend from './api-backend';
 import MainMenuRender from './main-menu-render';
 
-const initUI = () => {
+const initInt = () => {
   const modalOperator = new ModalOperator(document.body, document.querySelector('#scroll'));
   const showError = new ShowError();
   const apiBackend = new ApiBackend(config);
@@ -52,4 +52,4 @@ const initUI = () => {
   };
 };
 
-export default initUI;
+export default initInt;
