@@ -41,7 +41,6 @@ export default class Collection {
           item.date = new Date(Date.parse(item.date));
           this._collectionContainer.appendChild(this._buildCard(item));
         });
-        console.log(item);
         this._updateStatistics();
         console.log(res);
       })
