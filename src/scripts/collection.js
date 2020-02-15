@@ -39,7 +39,7 @@ export default class Collection {
           this._stats[item._id] = item.keyword;
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
-          console.log(this._buildCard(item));
+          console.log(this._collectionContainer.appendChild(this._buildCard(item)));
           this._collectionContainer.appendChild(this._buildCard(item));
         });
         this._updateStatistics();
