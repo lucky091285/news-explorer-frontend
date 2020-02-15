@@ -42,7 +42,7 @@ export default class Collection {
           this._collectionContainer.appendChild(this._buildCard(item));
         });
         this._updateStatistics();
-        console.log(res);
+        console.log(this._buildCard(item));
       })
       .catch((err) => this.showError.show(err.message));
   }
