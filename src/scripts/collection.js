@@ -40,7 +40,7 @@ export default class Collection {
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
           this._collectionContainer.appendChild(this._buildCard(item));
-          console.log(item);
+          console.log(res);
         });
         this._updateStatistics();
       })
