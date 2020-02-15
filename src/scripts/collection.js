@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
 export default class Collection {
@@ -39,6 +40,7 @@ export default class Collection {
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
           this._collectionContainer.appendChild(this._buildCard(item));
+          console.log(item);
         });
         this._updateStatistics();
       })
