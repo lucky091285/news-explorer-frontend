@@ -66,9 +66,9 @@ export default class NewsRender {
   _renderCards() {
     const container = document.createDocumentFragment();
     const delta = this._news.length - this._currentPos;
-    const sum = (delta) < this.cfg.showStep ? delta : this.cfg.showStep;
+    const qty = (delta) < this.cfg.showStep ? delta : this.cfg.showStep;
     if (delta <= this.cfg.showStep) this._showMore.classList.add(this.cfg.showMore.hide);
-    for (let i = 0; i < sum; i += 1) {
+    for (let i = 0; i < qty; i += 1) {
       container.appendChild(this._buildCard(this._news[this._currentPos]));
       this._currentPos += 1;
     }

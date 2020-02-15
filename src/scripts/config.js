@@ -41,7 +41,7 @@ const config = {
   },
   collection: {
     collectionContainer: '.storage',
-    articlesSum: '.articles-sum',
+    articlesQty: '.articles-qty',
     articlesHeader: '.saved-papers__title',
     words: {
       first: '.first-word',

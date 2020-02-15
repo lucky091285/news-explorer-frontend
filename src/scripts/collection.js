@@ -14,7 +14,7 @@ export default class Collection {
     this.deleteArticle = deleteArticle;
     this.cardTemplate = document.querySelector(cardSample).content;
     this._collectionContainer = document.querySelector(this.cfg.collectionContainer);
-    this._articlesSum = document.querySelector(this.cfg.articlesSum);
+    this._articlesQty = document.querySelector(this.cfg.articlesQty);
     this._articlesHeader = document.querySelector(this.cfg.articlesHeader);
     this._stats = {};
 
@@ -93,7 +93,7 @@ export default class Collection {
   }
 
   _updateStatistics() {
-    this._articlesSum.textContent = `${Array.from(Object.keys(this._stats)).length} сохраненных статей`;
+    this._articlesQty.textContent = `${Array.from(Object.keys(this._stats)).length} сохраненных статей`;
     const keywords = this._keywordCount();
 
     document.querySelector(this.cfg.words.first).textContent = keywords.total >= 1 ? keywords.popular.shift() : '';
