@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
 export default class Collection {
@@ -39,7 +38,6 @@ export default class Collection {
           this._stats[item._id] = item.keyword;
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
-          console.log(item.date);
           this._collectionContainer.appendChild(this._buildCard(item));
         });
         this._updateStatistics();
