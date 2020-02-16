@@ -144,9 +144,6 @@ export default class NewsRender {
             .then(() => {
               event.target.classList.remove(this.card.icon.marked);
               event.target.removeAttribute('UID');
-              delete this._stats[event.target.getAttribute('UID')];
-              this._collectionContainer.removeChild(event.target.closest(this.card.node));
-              this._updateStatistics();
             })
             .catch((err) => {
               this.showError.show(err.message);
