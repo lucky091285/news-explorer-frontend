@@ -41,11 +41,12 @@ export default class Collection {
 
         console.log('3', res);
         this._stats[res._id] = res.keyword;
+        console.log('4', res._id);
         // eslint-disable-next-line no-param-reassign
         res.date = new Date(Date.parse(res.date));
         const card = this._buildCard(res);
         this._collectionContainer.appendChild(card);
-        console.log('4', card);
+        console.log('5', card);
 
         this._updateStatistics();
       })
