@@ -40,7 +40,8 @@ export default class Collection {
       .then((res) => {
         console.log('2', res);
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
-        res.forEach((item) => {
+        const arr = res.data[key];
+        arr.forEach((item) => {
           console.log('3', item);
           this.item._id = item.keyword;
           console.log('4', item._id);
