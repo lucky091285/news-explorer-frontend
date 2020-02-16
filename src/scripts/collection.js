@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-console */
@@ -44,7 +45,7 @@ export default class Collection {
         console.log('3', res.data);
         arr.forEach((item) => {
           console.log('4', item);
-          this.item._id = item.keyword;
+          item._id = item.keyword;
           console.log('5', item._id);
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
