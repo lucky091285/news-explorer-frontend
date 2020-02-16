@@ -51,7 +51,7 @@ export default class NewsRender {
     container.querySelector(this.card.src).textContent = data.source;
     // eslint-disable-next-line max-len
     if (this._isLogged()) container.querySelector(this.card.icon.node).classList.add(this.card.icon.logged);
-    container.querySelector(this.card.icon.node).setAttribute('cardID', this._currentPos, this.card.icon.marked);
+    container.querySelector(this.card.icon.node).setAttribute('cardID', this._currentPos);
     return container;
   }
 
