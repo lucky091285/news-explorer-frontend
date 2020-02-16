@@ -38,16 +38,15 @@ export default class Collection {
       .then((res) => {
         console.log('2', res);
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
-
-        console.log('3', res);
-        this._stats[res._id] = res.keyword;
-        console.log('4', res.keyword);
-        // eslint-disable-next-line no-param-reassign
-        res.date = new Date(Date.parse(res.date));
-        const card = this._buildCard(res);
-        this._collectionContainer.appendChild(card);
-        console.log('5', card);
-
+        Array.from(res).forEach((item) => {
+          console.log('3', item);
+          this.item._id = item.keyword;
+          // eslint-disable-next-line no-param-reassign
+          item.date = new Date(Date.parse(item.date));
+          const card = this._buildCard(item);
+          this._collectionContainer.appendChild(card);
+          console.log('4', card);
+        });
         this._updateStatistics();
       })
       .catch((err) => this.showError.show(err.message));
