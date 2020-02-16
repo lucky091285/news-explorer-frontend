@@ -31,6 +31,7 @@ export default class Collection {
   }
 
   render() {
+    console.log('0', this.isLogged);
     if (!this.isLogged) return;
     console.log('1');
     this.getAllArticles()
