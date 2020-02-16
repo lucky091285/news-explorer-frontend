@@ -1,3 +1,5 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
@@ -40,13 +42,16 @@ export default class Collection {
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
         const item = res.data;
         console.log('3', item);
-        this.item.key._id = item.keyword;
-        // eslint-disable-next-line no-param-reassign
-        item.date = new Date(Date.parse(item.date));
-        const card = this._buildCard(item);
-        this._collectionContainer.appendChild(card);
-        console.log('4', card);
-        this._updateStatistics();
+        for (key in item) {
+          this.key._id = item.keyword;
+          console.log('4', key._id);
+          // eslint-disable-next-line no-param-reassign
+          key.date = new Date(Date.parse(key.date));
+          const card = this._buildCard(key);
+          this._collectionContainer.appendChild(card);
+          console.log('5', card);
+          this._updateStatistics();
+        }
       })
       .catch((err) => this.showError.show(err.message));
   }
