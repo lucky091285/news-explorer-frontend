@@ -32,15 +32,19 @@ export default class Collection {
 
   render() {
     if (!this.isLogged) return;
+    console.log('1');
     this.getAllArticles()
       .then((res) => {
+        console.log('2', res);
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
         Array.from(res).forEach((item) => {
+          console.log('3', item);
           this._stats[item._id] = item.keyword;
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
-          this._collectionContainer.appendChild(this._buildCard(item));
-          console.log(this._buildCard(item));
+          const card = this._buildCard(item);
+          this._collectionContainer.appendChild(card);
+          console.log('4', card);
         });
         this._updateStatistics();
       })
