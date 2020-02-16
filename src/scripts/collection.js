@@ -40,18 +40,16 @@ export default class Collection {
       .then((res) => {
         console.log('2', res);
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
-        const item = res.data;
+        const item = this.res.data;
         console.log('3', item);
-        for (key in item) {
-          this.key._id = item.keyword;
-          console.log('4', key._id);
-          // eslint-disable-next-line no-param-reassign
-          key.date = new Date(Date.parse(key.date));
-          const card = this._buildCard(key);
-          this._collectionContainer.appendChild(card);
-          console.log('5', card);
-          this._updateStatistics();
-        }
+        this.item._id = item.keyword;
+        console.log('4', item._id);
+        // eslint-disable-next-line no-param-reassign
+        item.date = new Date(Date.parse(item.date));
+        const card = this._buildCard(item);
+        this._collectionContainer.appendChild(card);
+        console.log('5', card);
+        this._updateStatistics();
       })
       .catch((err) => this.showError.show(err.message));
   }
