@@ -127,7 +127,6 @@ export default class AuthForm {
   }
 
   openNext() {
-    this.disableSubmitButton();
     this.domElement.classList.add('popup_hide');
     this.goTo.classList.remove('popup_hide');
   }
