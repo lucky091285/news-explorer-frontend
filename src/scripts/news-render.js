@@ -124,8 +124,9 @@ export default class NewsRender {
   patchRender() {
     Array.from(this._resultsField.querySelectorAll(this.card.node)).forEach(
       (item) => {
+        console.log(item);
         if (this._isLogged()) {
-          item.querySelector(this.card.icon.node).classList.add(this.card.icon.marked);
+          item.querySelector(this.card.icon.node).classList.add(this.card.icon.logged);
         } else {
           item.querySelector(this.card.icon.node).classList.remove(this.card.icon.logged);
           item.querySelector(this.card.icon.node).classList.remove(this.card.icon.marked);
