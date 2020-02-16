@@ -49,11 +49,11 @@ export default class Collection {
           console.log('5', item._id);
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
-          const card = _buildCard(item);
+          const card = this._buildCard(item);
           this._collectionContainer.appendChild(card);
           console.log('6', card);
         });
-        _updateStatistics();
+        this._updateStatistics();
         console.log('7', card);
       })
       .catch((err) => this.showError.show(err.message));
