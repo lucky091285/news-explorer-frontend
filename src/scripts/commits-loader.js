@@ -14,8 +14,8 @@ export default class CommitsLoader {
       .then((data) => {
         const commits = [];
         const total = Array.from(Object.keys(data)).length;
-        const commitsQty = total < this.maxGitCommits ? total : this.maxGitCommits;
-        for (let key = 0; key < commitsQty; key += 1) {
+        const commitsSum = total < this.maxGitCommits ? total : this.maxGitCommits;
+        for (let key = 0; key < commitsSum; key += 1) {
           commits.push({
             name: data[key].commit.committer.name,
             email: data[key].commit.committer.email,

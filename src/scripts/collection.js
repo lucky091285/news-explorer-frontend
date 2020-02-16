@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
 export default class Collection {
@@ -13,7 +14,7 @@ export default class Collection {
     this.deleteArticle = deleteArticle;
     this.cardTemplate = document.querySelector(cardSample).content;
     this._collectionContainer = document.querySelector(this.cfg.collectionContainer);
-    this._articlesQty = document.querySelector(this.cfg.articlesQty);
+    this._articlesSum = document.querySelector(this.cfg.articlesSum);
     this._articlesHeader = document.querySelector(this.cfg.articlesHeader);
     this._stats = {};
 
@@ -39,6 +40,7 @@ export default class Collection {
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
           this._collectionContainer.appendChild(this._buildCard(item));
+          console.log(this._buildCard(item));
         });
         this._updateStatistics();
       })
@@ -91,7 +93,7 @@ export default class Collection {
   }
 
   _updateStatistics() {
-    this._articlesQty.textContent = `${Array.from(Object.keys(this._stats)).length} сохраненных статей`;
+    this._articlesSum.textContent = `${Array.from(Object.keys(this._stats)).length} сохраненных статей`;
     const keywords = this._keywordCount();
 
     document.querySelector(this.cfg.words.first).textContent = keywords.total >= 1 ? keywords.popular.shift() : '';

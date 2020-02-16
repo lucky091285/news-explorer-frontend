@@ -325,7 +325,7 @@ details {
  * Add the correct display in all browsers.
  */
 
-qtymary {
+summary {
   display: list-item;
 }
 
