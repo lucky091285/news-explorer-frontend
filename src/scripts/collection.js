@@ -42,7 +42,7 @@ export default class Collection {
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
         const item = res.data;
         console.log('3', item);
-        this_stats[item._id] = item.keyword;
+        this._stats[item._id] = item.keyword;
         console.log('4', item._id);
         // eslint-disable-next-line no-param-reassign
         item.date = new Date(Date.parse(item.date));
