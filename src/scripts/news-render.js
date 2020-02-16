@@ -152,6 +152,7 @@ export default class NewsRender {
         } else {
           this.saveArticle(this._news[event.target.getAttribute('cardID')])
             .then((res) => {
+              console.log(res);
               event.target.classList.add(this.card.icon.marked);
               event.target.setAttribute('UID', res);
             })
