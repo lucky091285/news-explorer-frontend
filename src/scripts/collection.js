@@ -42,14 +42,15 @@ export default class Collection {
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
         const item = res.data;
         console.log('3', item);
-        this._stats[item._id] = item.keyword;
-        console.log('4', item._id);
+        this._stats[item[0].id] = item.keyword;
+        console.log('4', item[0]._id);
         // eslint-disable-next-line no-param-reassign
-        item.date = new Date(Date.parse(item.date));
+        item[0].date = new Date(Date.parse(item.date));
         const card = this._buildCard(item);
         this._collectionContainer.appendChild(card);
         console.log('5', card);
         this._updateStatistics();
+        console.log('6', card);
       })
       .catch((err) => this.showError.show(err.message));
   }
