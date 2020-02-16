@@ -40,9 +40,9 @@ export default class Collection {
       .then((res) => {
         console.log('2', res);
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
-        const item = this.res.data;
+        const item = res.data;
         console.log('3', item);
-        this.item._id = item.keyword;
+        this_stats[item._id] = item.keyword;
         console.log('4', item._id);
         // eslint-disable-next-line no-param-reassign
         item.date = new Date(Date.parse(item.date));
