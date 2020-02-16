@@ -34,27 +34,17 @@ export default class Collection {
   }
 
   render() {
-    console.log('0', this.isLogged);
     if (!this.isLogged) return;
-    console.log('1');
     this.getAllArticles()
       .then((res) => {
-        console.log('2', res);
         this._articlesHeader.insertAdjacentText('afterbegin', this.userName());
-        const arr = res.data;
-        console.log('3', res.data);
-        arr.forEach((item) => {
-          console.log('4', item);
-          item._id = item.keyword;
-          console.log('5', item._id);
+        Array.from(res).forEach((item) => {
+          this._stats[item._id] = item.keyword;
           // eslint-disable-next-line no-param-reassign
           item.date = new Date(Date.parse(item.date));
-          const card = this._buildCard(item);
-          this._collectionContainer.appendChild(card);
-          console.log('6', card);
+          this._collectionContainer.appendChild(this._buildCard(item));
         });
         this._updateStatistics();
-        console.log('7', card);
       })
       .catch((err) => this.showError.show(err.message));
   }
