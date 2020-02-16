@@ -125,7 +125,7 @@ export default class NewsRender {
     Array.from(this._resultsField.querySelectorAll(this.card.node)).forEach(
       (item) => {
         if (this._isLogged()) {
-          item.querySelector(this.card.icon.node).classList.add(this.card.icon.logged);
+          item.querySelector(this.card.icon.node).classList.add(this.card.icon.marked);
         } else {
           item.querySelector(this.card.icon.node).classList.remove(this.card.icon.logged);
           item.querySelector(this.card.icon.node).classList.remove(this.card.icon.marked);
@@ -152,7 +152,6 @@ export default class NewsRender {
         } else {
           this.saveArticle(this._news[event.target.getAttribute('cardID')])
             .then((res) => {
-              console.log(res);
               event.target.classList.add(this.card.icon.marked);
               event.target.setAttribute('UID', res);
             })
