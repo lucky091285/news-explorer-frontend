@@ -116,7 +116,6 @@ export default class AuthForm {
   }
 
   open() {
-    this.disableSubmitButton();
     this.domElement.classList.remove('popup_hide');
     document.querySelector('#scroll').classList.add('body-noscroll');
   }

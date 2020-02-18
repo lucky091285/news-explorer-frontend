@@ -4,11 +4,11 @@ import './vendor/normalize.css';
 import './index.css';
 import config from './scripts/config';
 import { menuOperator, mainMenu } from './blocks/menu/menu';
-import initInt from './scripts/setup';
+import initInterface from './scripts/setup';
 import NewsApi from './scripts/news-api';
 import NewsRender from './scripts/news-render';
 
-const pageInt = initInt();
+const pageInt = initInterface();
 
 const newsApi = new NewsApi(config.newsFeed);
 

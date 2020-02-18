@@ -5,10 +5,10 @@ import './index.css';
 import config from '../../scripts/config';
 /* eslint-disable no-unused-vars */
 import { menuOperator, mainMenu } from '../../blocks/menu/menu';
-import initInt from '../../scripts/setup';
+import initInterface from '../../scripts/setup';
 import Collection from '../../scripts/collection';
 
-const pageInt = initInt();
+const pageInt = initInterface();
 
 const myCollection = new Collection(
   pageInt.apiBackend.getAllArticles.bind(pageInt.apiBackend),

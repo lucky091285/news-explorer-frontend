@@ -1,6 +1,6 @@
 @import url(./_logged/card__icon_logged.css);
 @import url(./_marked/card__icon_marked.css);
-@import url(./_del/card__icon_del.css);
+@import url(./_basket/card__icon_basket.css);
 
 .card__icon {
   background-image: url(../../../../images/bookmark/normal.svg);

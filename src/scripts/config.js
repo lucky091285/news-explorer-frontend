@@ -36,7 +36,7 @@ const config = {
       node: '.card__icon',
       logged: 'card__icon_logged',
       marked: 'card__icon_marked',
-      del: 'card__icon_del',
+      basket: 'card__icon_basket',
     },
   },
   collection: {
