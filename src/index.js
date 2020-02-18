@@ -10,7 +10,7 @@ import NewsRender from './scripts/news-render';
 
 const pageInt = initInterface();
 
-const newsApi = new NewsApi(config.newsFeed);
+const newsApi = new NewsApi(config.newsFeed, config.sevenDays);
 
 const newsRender = new NewsRender(
   newsApi.getNews.bind(newsApi),
