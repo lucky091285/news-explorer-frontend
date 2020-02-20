@@ -13,10 +13,7 @@ export default class ModalOperator {
     if (Array.from(this.clickElement.classList).includes('body-noscroll')) {
       if (event.code === 'Escape') {
         this.modals.find(
-          // eslint-disable-next-line no-confusing-arrow
-          (element) => Array.from(element.classList)
-            // eslint-disable-next-line no-unneeded-ternary
-            .includes('popup_hide') ? false : true,
+          (element) => !Array.from(element.classList).includes('popup_hide'),
         ).classList.add('popup_hide');
         this.clickElement.classList.remove('body-noscroll');
       }

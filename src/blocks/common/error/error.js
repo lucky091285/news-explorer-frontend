@@ -21,14 +21,14 @@ export default class ShowError {
 
   _onKey(event) {
     if (event.code === 'Escape') {
-      if (Array.from(this.domElement.classList).includes('sys-error_on')) {
+      if (this.domElement.classList.contains('sys-error_on')) {
         this.hide();
       }
     }
   }
 
   _onClick() {
-    if (Array.from(this.domElement.classList).includes('sys-error_on')) {
+    if (this.domElement.classList.contains('sys-error_on')) {
       this.hide();
     }
   }
