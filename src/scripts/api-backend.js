@@ -4,17 +4,17 @@
 
 export default class ApiBackend {
   constructor({
-    login, signup, logout, getUser, articles,
+    signInUrl, signUpUrl, logOutUrl, getUser, articles,
   }) {
-    this._login = login;
-    this._signup = signup;
-    this._logout = logout;
+    this._signInUrl = signInUrl;
+    this._signUpUrl = signUpUrl;
+    this._logOutUrl = logOutUrl;
     this._getUser = getUser;
     this._articles = articles;
   }
 
   logout() {
-    return fetch(this._logout,
+    return fetch(this._logOutUrl,
       {
         method: 'POST',
         headers: {
@@ -26,14 +26,11 @@ export default class ApiBackend {
       .then((res) => {
         if (!res.ok) throw new Error(`Ошибка выхода: ${res.status}`);
         return res.json();
-      })
-      .catch((e) => {
-        throw new Error(e.message);
       });
   }
 
   login(data) {
-    return fetch(this._login,
+    return fetch(this._signInUrl,
       {
         method: 'POST',
         headers: {
@@ -46,9 +43,6 @@ export default class ApiBackend {
       .then((res) => {
         if (!res.ok) throw new Error(res.status);
         return res.json();
-      })
-      .catch((err) => {
-        throw new Error(err.message);
       });
   }
 
@@ -58,14 +52,11 @@ export default class ApiBackend {
         if (!res.ok) throw new Error(`Ошибка чтения ${res.status}`);
         return res.json();
       })
-      .then((userInfo) => userInfo.user)
-      .catch((err) => {
-        throw new Error(err.message);
-      });
+      .then((userInfo) => userInfo.user);
   }
 
   signUp(data) {
-    return fetch(this._signup,
+    return fetch(this._signUpUrl,
       {
         method: 'POST',
         headers: {
@@ -80,9 +71,6 @@ export default class ApiBackend {
           throw new Error(res.status);
         }
         return res.json();
-      })
-      .catch((err) => {
-        throw new Error(err.message);
       });
   }
 
@@ -101,10 +89,7 @@ export default class ApiBackend {
         if (!res.ok) throw new Error(`Ошибка сохранения карточки ${res.status}`);
         return res.json();
       })
-      .then((res) => res._id)
-      .catch((err) => {
-        throw new Error(err.message);
-      });
+      .then((res) => res._id);
   }
 
   deleteArticle(id) {
@@ -120,9 +105,6 @@ export default class ApiBackend {
       .then((res) => {
         if (!res.ok) throw new Error(`Ошибка удаления карточки ${res.status}`);
         return res.json();
-      })
-      .catch((err) => {
-        throw new Error(err.message);
       });
   }
 
@@ -139,9 +121,6 @@ export default class ApiBackend {
       .then((res) => {
         if (!res.ok) throw new Error(`Ошибка чтения карточек ${res.status}`);
         return res.json();
-      })
-      .catch((err) => {
-        throw new Error(err.message);
       });
   }
 }
