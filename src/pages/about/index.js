@@ -11,6 +11,7 @@ import initInterface from '../../scripts/setup';
 import CommitsLoader from '../../scripts/commits-loader';
 import CommitsRender from '../../scripts/commits-render';
 
+const widthWindow = 767;
 const pageInt = initInterface();
 
 const swiper = new Swiper('.swiper-container', {
@@ -56,5 +57,5 @@ const commitsRender = new CommitsRender(
 commitsRender.init();
 
 window.onresize = () => {
-  if (window.innerWidth > 767) mainMenu.close();
+  if (window.innerWidth > widthWindow) mainMenu.close();
 };

@@ -11,15 +11,14 @@ export default class ApiBackend {
     this._logOutUrl = logOutUrl;
     this._getUser = getUser;
     this._articles = articles;
+    this.baseHeader = { 'Content-Type': 'application/json' };
   }
 
   logout() {
     return fetch(this._logOutUrl,
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: this.baseHeader,
         mode: 'cors',
         credentials: 'include',
       })
@@ -33,9 +32,7 @@ export default class ApiBackend {
     return fetch(this._signInUrl,
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: this.baseHeader,
         mode: 'cors',
         credentials: 'include',
         body: JSON.stringify(data),
@@ -59,11 +56,9 @@ export default class ApiBackend {
     return fetch(this._signUpUrl,
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        mode: 'cors',
         credentials: 'include',
+        headers: this.baseHeader,
+        mode: 'cors',
         body: JSON.stringify(data),
       })
       .then((res) => {
@@ -78,9 +73,7 @@ export default class ApiBackend {
     return fetch(this._articles,
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: this.baseHeader,
         mode: 'cors',
         credentials: 'include',
         body: JSON.stringify(data),
@@ -96,9 +89,7 @@ export default class ApiBackend {
     return fetch(`${this._articles}/${id}`,
       {
         method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: this.baseHeader,
         mode: 'cors',
         credentials: 'include',
       })
@@ -112,9 +103,7 @@ export default class ApiBackend {
     return fetch(this._articles,
       {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: this.baseHeader,
         mode: 'cors',
         credentials: 'include',
       })

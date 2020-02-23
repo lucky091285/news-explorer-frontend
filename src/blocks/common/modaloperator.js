@@ -1,11 +1,11 @@
 import './scroll-lock.css';
 
 export default class ModalOperator {
-  constructor(kbdElement, elementClick) {
-    this.kbdElement = kbdElement;
+  constructor(elementKeyboard, elementClick) {
+    this.elementKeyboard = elementKeyboard;
     this.elementClick = elementClick;
-    this.modals = Array.from(this.kbdElement.querySelectorAll('.popup'));
-    this.kbdElement.addEventListener('keydown', (event) => this.onKey(event));
+    this.modals = Array.from(this.elementKeyboard.querySelectorAll('.popup'));
+    this.elementKeyboard.addEventListener('keydown', (event) => this.onKey(event));
     this.elementClick.addEventListener('mousedown', (event) => this.onClick(event));
   }
 

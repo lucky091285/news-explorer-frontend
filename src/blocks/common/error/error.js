@@ -5,8 +5,7 @@ export default class ShowError {
   constructor() {
     this.domElement = document.querySelector('#system-error');
     this.errorMessage = document.querySelector('#system-error-message');
-    document.addEventListener('click', () => this._onClick());
-    document.addEventListener('keydown', (event) => this._onKey(event));
+    document.addEventListener('click', () => this.hide());
   }
 
   show(message) {

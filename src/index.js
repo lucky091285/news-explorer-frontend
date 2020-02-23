@@ -8,6 +8,7 @@ import initInterface from './scripts/setup';
 import NewsApi from './scripts/news-api';
 import NewsRender from './scripts/news-render';
 
+const widthWindow = 767;
 const pageInt = initInterface();
 
 const newsApi = new NewsApi(config.newsFeed, config.sevenDays);
@@ -21,5 +22,5 @@ const newsRender = new NewsRender(
 );
 
 window.onresize = () => {
-  if (window.innerWidth > 767) mainMenu.close();
+  if (window.innerWidth > widthWindow) mainMenu.close();
 };

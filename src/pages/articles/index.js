@@ -8,6 +8,7 @@ import { menuOperator, mainMenu } from '../../blocks/menu/menu';
 import initInterface from '../../scripts/setup';
 import Collection from '../../scripts/collection';
 
+const widthWindow = 767;
 const pageInt = initInterface();
 
 const myCollection = new Collection(
@@ -18,5 +19,5 @@ const myCollection = new Collection(
 );
 
 window.onresize = () => {
-  if (window.innerWidth > 767) mainMenu.close();
+  if (window.innerWidth > widthWindow) mainMenu.close();
 };
