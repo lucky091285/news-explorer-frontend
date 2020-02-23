@@ -4,22 +4,23 @@ import './vendor/normalize.css';
 import './index.css';
 import config from './scripts/config';
 import { menuOperator, mainMenu } from './blocks/menu/menu';
-import initUI from './scripts/setup';
+import initInterface from './scripts/setup';
 import NewsApi from './scripts/news-api';
 import NewsRender from './scripts/news-render';
 
-const pageUI = initUI();
+const widthWindow = 767;
+const pageInt = initInterface();
 
-const newsApi = new NewsApi(config.newsFeed, config.newsFeed);
+const newsApi = new NewsApi(config.newsFeed, config.sevenDays);
 
 const newsRender = new NewsRender(
   newsApi.getNews.bind(newsApi),
-  pageUI.apiBackend.saveArticle.bind(pageUI.apiBackend),
-  pageUI.apiBackend.deleteArticle.bind(pageUI.apiBackend),
-  pageUI.showError,
+  pageInt.apiBackend.saveArticle.bind(pageInt.apiBackend),
+  pageInt.apiBackend.deleteArticle.bind(pageInt.apiBackend),
+  pageInt.showError,
   config,
 );
 
 window.onresize = () => {
-  if (window.innerWidth > 767) mainMenu.close();
+  if (window.innerWidth > widthWindow) mainMenu.close();
 };

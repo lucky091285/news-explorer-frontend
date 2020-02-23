@@ -1,6 +1,7 @@
 @import url(./__news/results__news.css);
 @import url(./__title/results__title.css);
 @import url(./__button/results__button.css);
+@import url(./_hide/results_hide.css);
 
 .results {
   display: flex;

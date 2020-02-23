@@ -1,8 +1,8 @@
 const config = {
   url: 'https://api.site-news.tk',
-  login: 'https://api.site-news.tk/signin',
-  signup: 'https://api.site-news.tk/signup',
-  logout: 'https://api.site-news.tk/logout',
+  signInUrl: 'https://api.site-news.tk/signin',
+  signUpUrl: 'https://api.site-news.tk/signup',
+  logOutUrl: 'https://api.site-news.tk/logout',
   getUser: 'https://api.site-news.tk/users/me',
   articles: 'https://api.site-news.tk/articles',
   git: 'https://api.github.com/repos/lucky091285/news-explorer-frontend/commits',
@@ -12,14 +12,14 @@ const config = {
   sevenDays: (7 * 24 * 3600 * 1000),
   newsFeed: 'https://newsapi.org/v2/everything?sortBy=popularity&apiKey=32d93de8aad245a2986cdb37bec3d666&language=ru&pageSize=100',
   results: {
-    showStep: 3,
-    showMore: { node: '#show-more', hide: 'results__button_hide' },
+    viewStep: 3,
+    showMoreButton: { node: '#show-more', hide: 'results__button_hide' },
     resultsField: '.results__news',
     newsForm: '.search__form',
     newsFormSearchField: '.search__form-input',
     newsFormButton: '#search-the-news',
     preloader: { node: '#preloader-searching', hide: 'preloader__message_hide' },
-    notFound: { node: '#preloader-not-found', hide: 'preloader__message_hide' },
+    foundError: { node: '#preloader-not-found', hide: 'preloader__message_hide' },
     serverError: { node: '#preloader-server-error', hide: 'preloader__message_hide' },
     resultsSection: { node: '.results', hide: 'results_hide' },
   },
@@ -37,12 +37,12 @@ const config = {
       node: '.card__icon',
       logged: 'card__icon_logged',
       marked: 'card__icon_marked',
-      bin: 'card__icon_delete',
+      basket: 'card__icon_basket',
     },
   },
   collection: {
     collectionContainer: '.storage',
-    articlesQty: '.articles-sum',
+    articlesSum: '.articles-sum',
     articlesHeader: '.saved-papers__title',
     words: {
       first: '.first-word',
@@ -62,6 +62,5 @@ const config = {
     swiperWrap: '.swiper-wrapper',
   },
 };
-
 
 export default config;

@@ -1,3 +1,5 @@
+@import url(./_hide/results__button_hide.css);
+
 .results__button {
   border-radius: 80px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -10,6 +12,10 @@
   border: 0;
   box-shadow: none;
   cursor: pointer;
+}
+
+.button.results__button:hover {
+  opacity: 0.9;
 }
 
 .button.results__button:active {

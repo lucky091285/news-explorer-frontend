@@ -1,24 +1,21 @@
 import './scroll-lock.css';
 
 export default class ModalOperator {
-  constructor(kbdElement, clickElement) {
-    this.kbdElement = kbdElement;
-    this.clickElement = clickElement;
-    this.modals = Array.from(this.kbdElement.querySelectorAll('.popup'));
-    this.kbdElement.addEventListener('keydown', (event) => this.onKey(event));
-    this.clickElement.addEventListener('mousedown', (event) => this.onClick(event));
+  constructor(elementKeyboard, elementClick) {
+    this.elementKeyboard = elementKeyboard;
+    this.elementClick = elementClick;
+    this.modals = Array.from(this.elementKeyboard.querySelectorAll('.popup'));
+    this.elementKeyboard.addEventListener('keydown', (event) => this.onKey(event));
+    this.elementClick.addEventListener('mousedown', (event) => this.onClick(event));
   }
 
   onKey(event) {
-    if (Array.from(this.clickElement.classList).includes('body-noscroll')) {
+    if (Array.from(this.elementClick.classList).includes('body-noscroll')) {
       if (event.code === 'Escape') {
         this.modals.find(
-          // eslint-disable-next-line no-confusing-arrow
-          (element) => Array.from(element.classList)
-            // eslint-disable-next-line no-unneeded-ternary
-            .includes('popup_hide') ? false : true,
+          (element) => !Array.from(element.classList).includes('popup_hide'),
         ).classList.add('popup_hide');
-        this.clickElement.classList.remove('body-noscroll');
+        this.elementClick.classList.remove('body-noscroll');
       }
     }
   }
@@ -26,7 +23,7 @@ export default class ModalOperator {
   onClick(event) {
     if (Array.from(event.target.classList).includes('popup')) {
       event.target.classList.add('popup_hide');
-      this.clickElement.classList.remove('body-noscroll');
+      this.elementClick.classList.remove('body-noscroll');
     }
   }
 }

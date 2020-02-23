@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-self-compare */
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 export default class NewsRender {
@@ -20,15 +22,15 @@ export default class NewsRender {
     this._submit = document.querySelector(results.newsForm);
     this._searchString = document.querySelector(results.newsFormSearchField);
     this._searchButton = document.querySelector(results.newsFormButton);
-    this._showMore = document.querySelector(results.showMore.node);
+    this._showMoreButton = document.querySelector(results.showMoreButton.node);
     this._preloader = document.querySelector(results.preloader.node);
-    this._notFound = document.querySelector(results.notFound.node);
+    this._foundError = document.querySelector(results.foundError.node);
     this._serverError = document.querySelector(results.serverError.node);
     this._resultsSection = document.querySelector(results.resultsSection.node);
     this._currentPos = 0;
 
     this._submit.addEventListener('submit', (event) => this.search(event));
-    this._showMore.addEventListener('click', () => this._renderCards());
+    this._showMoreButton.addEventListener('click', () => this._renderCards());
     this._resultsField.addEventListener('click', (event) => this.cardHandler(event));
     document.addEventListener('updateView', () => this.patchRender());
   }
@@ -66,9 +68,9 @@ export default class NewsRender {
   _renderCards() {
     const container = document.createDocumentFragment();
     const delta = this._news.length - this._currentPos;
-    const qty = (delta) < this.cfg.showStep ? delta : this.cfg.showStep;
-    if (delta <= this.cfg.showStep) this._showMore.classList.add(this.cfg.showMore.hide);
-    for (let i = 0; i < qty; i += 1) {
+    const sum = (delta) < this.cfg.viewStep ? delta : this.cfg.viewStep;
+    if (delta <= this.cfg.viewStep) this._showMoreButton.classList.add(this.cfg.showMoreButton.hide);
+    for (let i = 0; i < sum; i += 1) {
       container.appendChild(this._buildCard(this._news[this._currentPos]));
       this._currentPos += 1;
     }
@@ -92,9 +94,9 @@ export default class NewsRender {
     }
     this._serverError.classList.add(this.cfg.serverError.hide);
     this._resultsSection.classList.add(this.cfg.resultsSection.hide);
-    this._notFound.classList.add(this.cfg.notFound.hide);
+    this._foundError.classList.add(this.cfg.foundError.hide);
     this._preloader.classList.remove(this.cfg.preloader.hide);
-    this._showMore.classList.remove(this.cfg.showMore.hide);
+    this._showMoreButton.classList.remove(this.cfg.showMoreButton.hide);
     if (this._news.length !== 0) {
       this._clearResultsList();
     }
@@ -104,7 +106,7 @@ export default class NewsRender {
         this._news = data;
         this._preloader.classList.add(this.cfg.preloader.hide);
         if (data.length === 0) {
-          this._notFound.classList.remove(this.cfg.notFound.hide);
+          this._foundError.classList.remove(this.cfg.foundError.hide);
         } else {
           this._renderCards();
           this._resultsSection.classList.remove(this.cfg.resultsSection.hide);
@@ -113,8 +115,8 @@ export default class NewsRender {
       })
       .catch((err) => {
         console.log(err.message);
-        this._notFound.classList.add(this.cfg.notFound.hide);
-        this._preloader.classList.add(this.cfg.notFound.hide);
+        this._foundError.classList.add(this.cfg.foundError.hide);
+        this._preloader.classList.add(this.cfg.foundError.hide);
         this._serverError.classList.remove(this.cfg.serverError.hide);
         this._unblockForm();
         this.showError.show(err.message);
@@ -124,6 +126,7 @@ export default class NewsRender {
   patchRender() {
     Array.from(this._resultsField.querySelectorAll(this.card.node)).forEach(
       (item) => {
+        console.log(item);
         if (this._isLogged()) {
           item.querySelector(this.card.icon.node).classList.add(this.card.icon.logged);
         } else {

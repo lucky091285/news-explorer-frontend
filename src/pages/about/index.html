@@ -58,7 +58,7 @@
       </main>
       <section class="tech">
         <div class="tech__wrap">
-          <h1 class="tech__title">Используемые технологии</h1>
+          <h2 class="tech__title">Используемые технологии</h2>
           <div class="tech__logos">
             <img src="../<%= require('../../images/tech/html.svg')%>" alt="HTML5">
             <img src="../<%= require('../../images/tech/css.svg')%>" alt="CSS3">
@@ -66,140 +66,143 @@
             <img src="../<%= require('../../images/tech/webpack.svg')%>" alt="Webpack">
           </div>
         </div>
-        </section>
-        <section class="about">
-          <img class="about__photo" src="../<%= require('../../images/selfie.jpg')%>" alt="Фото автора">
-          <div>
-            <h3 class="about__title">Об авторе</h3>
-            <p class="about__text">
-              Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
-              технологиями разработки владеете.
-            </p>
-            <p class="about__text">
-              Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-              потенциальным заказчикам.
-            </p>
-          </div>
-        </section>
-        <section class="slider">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <template id="commit-sample">
-                <div class="swiper-slide">
-                  <div class="slider__commit-card">
-                    <p class="slider__commit-date"></p>
-                    <div class="slider__commit-person">
-                      <img class="slider__commit-image" src="" alt="Фото из GitHub">
-                      <div>
-                        <h4 class="slider__commit-name"></h4>
-                        <p class="slider__commit-email"></p>
-                      </div>
-                    </div>
-                    <p class="slider__commit-text"></p>
-                  </div>
-                </div>
-              </template>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-          <div class="swiper-button-next next"></div>
-          <a class="button slider__git-button" href="https://github.com/lucky091285/" target="_blank">Открыть в GitHub</a>
-        </section>
-        <footer class="footer">
-          <p class="footer__copyright">© 2019 ds33vladimir</p>
-          <nav>
-            <ul class="footer__menu">
-              <li class="footer__menu-item"><a href="../">Главная</a></li>
-              <li class="footer__menu-item"><a href="./">О проекте</a></li>
-              <li class="footer__menu-item"><a href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практикум</a>
-              </li>
-            </ul>
-          </nav>
-          <p class="footer__links">
-            <a href="https://github.com/lucky091285/" class="footer__icon" target="_blank">
-              <img src="../<%= require('../../images/social/git.svg')%>" alt="GitHub Logo">
-            </a>
-            <a href="https://facebook.com" class="footer__icon" target="_blank">
-              <img src="../<%= require('../../images/social/facebook.svg')%>" alt="Facebook Logo">
-            </a>
+      </section>
+      <section class="about">
+        <img class="about__photo" src="../<%= require('../../images/selfie.jpg')%>" alt="Фото автора">
+        <div>
+          <h3 class="about__title">Об авторе</h3>
+          <p class="about__text">
+            Добрый день! Меня зовут Дмитрий. Я отучился на курсах веб-разработчика на платформе Яндекс.Практикум.
+            Мы изучили HTML, CSS, JavaScript, Node.js, Webpack, работу с GitHub и основы бекэнда.
           </p>
-        </footer>
-
-        <div id="service-area">
-          <section class="popup popup_hide" id="login-form">
-            <form class="auth-form" name="login">
-              <div class="auth-form__close" id="close-login-form"></div>
-              <h4 class="auth-form__title">Вход</h4>
-              <span class="auth-form__subtitle">E-mail</span>
-              <input class="auth-form__input" name="email" pattern="^[a-zA-Z0-9]\w*@\w+\.\w{2,6}" id="email" type="email" placeholder="Введите почту" required>
-              <span class="auth-form__error auth-form__error_hide" id="error-email">
-                Введите корректный адресe-mail
-              </span>
-              <span class="auth-form__subtitle">Пароль</span>
-              <input class="auth-form__input" name="password" id="password" type="password"
-                placeholder="Введите пароль" required>
-              <span class="auth-form__error auth-form__error_hide" id="error-password">
-                Поле не может быть пустым!
-              </span>
-              <span class="auth-form__error auth-form__error_usr-exists auth-form__error_hide" id="login-fatal">
-                Неправильный логин или пароль
-              </span>
-              <button class="button auth-form__button" name="login-button" type="submit">Войти</button>
-              <span class="auth-form__other-action">
-                или <span class="auth-form__other-action-click" id="open-signup-form">Зарегистрироваться</span>
-              </span>
-            </form>
-          </section>
-
-          <section class="popup popup_hide" id="signup-form">
-            <form class="auth-form" name="signup">
-              <div class="auth-form__close" id="close-signup-form"></div>
-              <h4 class="auth-form__title">Регистрация</h4>
-              <span class="auth-form__subtitle">E-mail</span>
-              <input class="auth-form__input" name="email" pattern="^[a-zA-Z0-9]\w*@\w+\.\w{2,6}" id="regemail" placeholder="Введите почту" type="email"
-                required>
-              <span class="auth-form__error auth-form__error_hide" id="error-regemail">Введите корректный адрес
-                e-mail</span>
-              <span class="auth-form__subtitle">Пароль</span>
-              <input class="auth-form__input" name="password" id="regpassword" type="password"
-                placeholder="Введите пароль" minlength="8" required>
-              <span class="auth-form__error auth-form__error_hide" id="error-regpassword">
-                Длина пароля должна быть 8 или более символов
-              </span>
-              <span class="auth-form__subtitle">Имя</span>
-              <input class="auth-form__input" name="username" id="regname" placeholder="Введите свое имя" required
-                minlength="2" pattern="[A-Za-zА-Яа-я]{2,}">
-              <span class="auth-form__error auth-form__error_hide" id="error-regname">
-                Имя должно и содержать только буквы
-              </span>
-              <span class="auth-form__error auth-form__error_usr-exists auth-form__error_hide" id="signup-fatal">
-                Такой пользователь уже есть
-              </span>
-              <button class="button auth-form__button" name="signup-button" type="submit">Зарегистрироваться</button>
-              <span class="auth-form__other-action">
-                или <span class="auth-form__other-action-click" id="open-login-form">Войти</span>
-              </span>
-            </form>
-          </section>
-
-          <section class="popup popup_hide" id="signup-ok">
-            <form class="auth-form">
-              <div class="auth-form__close" id="close-signup-ok-form"></div>
-              <h4 class="auth-form__title">Пользователь успешно зарегистрирован!</h4>
-              <span class="auth-form__other-action auth-form__other-action_left">
-                <span class="auth-form__other-action-click" id="open-login-modal">Выполнить вход</span>
-              </span>
-            </form>
-          </section>
-          <!-- add class "overlay_on" to show overlay -->
-          <div class="overlay"></div>
-          <div class="sys-error" id="system-error">
-            <div class="sys-error__close"></div>
-            <p class="sys-error__message" id="system-error-message"></p>
-          </div>
+          <p class="about__text">
+            Обучение было интересным и не простым, для человека, который никогда в жизни не занимался программированием. Нахожусь в поисках себя, поэтому прошу не судить меня строго. Многому научился, многое еще предстоит изучать. Главное что я понял для себя, что я хочу этому научится, и я научусь. Спасибо команде Яндекс.Практикума за поддержку и помощь, вы реально крутые)
+          </p>
         </div>
+      </section>
+      <section class="slider">
+        <div class="slider__header">
+          <h2 class="slider__title">История коммитов из GitHub</h2>
+          <a class="slider__subtitle" href="https://github.com/lucky091285/">Открыть в GitHub ></a>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <template id="commit-sample">
+              <div class="swiper-slide">
+                <div class="slider__commit-card">
+                  <p class="slider__commit-date"></p>
+                  <div class="slider__commit-person">
+                    <img class="slider__commit-image" src="" alt="Фото из GitHub">
+                    <div>
+                      <h4 class="slider__commit-name"></h4>
+                      <p class="slider__commit-email"></p>
+                    </div>
+                  </div>
+                  <p class="slider__commit-text"></p>
+                </div>
+              </div>
+            </template>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-next next"></div>
+        <a class="button slider__git-button" href="https://github.com/lucky091285/" target="_blank">Открыть в GitHub</a>
+      </section>
+      <footer class="footer">
+        <p class="footer__copyright">© 2019 ds33vladimir</p>
+        <nav>
+          <ul class="footer__menu">
+            <li class="footer__menu-item"><a href="../">Главная</a></li>
+            <li class="footer__menu-item"><a href="./">О проекте</a></li>
+            <li class="footer__menu-item"><a href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практикум</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__links">
+          <a href="https://github.com/lucky091285/" class="footer__icon" target="_blank">
+            <img src="../<%= require('../../images/social/git.svg')%>" alt="GitHub Logo">
+          </a>
+          <a href="https://facebook.com" class="footer__icon" target="_blank">
+            <img src="../<%= require('../../images/social/facebook.svg')%>" alt="Facebook Logo">
+          </a>
+        </p>
+      </footer>
+    </div>
+    <div id="service-area">
+      <section class="popup popup_hide" id="login-form">
+        <form class="auth-form" name="login">
+          <div class="auth-form__close" id="close-login-form"></div>
+          <h4 class="auth-form__title">Вход</h4>
+          <span class="auth-form__subtitle">E-mail</span>
+          <input class="auth-form__input" name="email" id="email" type="email" placeholder="Введите почту" required>
+          <span class="auth-form__error auth-form__error_hide" id="error-email">
+            Введите корректный адрес e-mail
+          </span>
+          <span class="auth-form__subtitle">Пароль</span>
+          <input class="auth-form__input" name="password" id="password" type="password" placeholder="Введите пароль"
+            required>
+          <span class="auth-form__error auth-form__error_hide" id="error-password">
+            Поле не может быть пустым!
+          </span>
+          <span class="auth-form__error auth-form__error_usr-exists auth-form__error_hide" id="login-fatal">
+            Неправильный логин или пароль
+          </span>
+          <button class="button auth-form__button" name="login-button" type="submit">Войти</button>
+          <span class="auth-form__other-action">
+            или <span class="auth-form__other-action-click" id="open-signup-form">Зарегистрироваться</span>
+          </span>
+        </form>
+      </section>
+
+      <section class="popup popup_hide" id="signup-form">
+        <form class="auth-form" name="signup">
+          <div class="auth-form__close" id="close-signup-form"></div>
+          <h4 class="auth-form__title">Регистрация</h4>
+          <span class="auth-form__subtitle">E-mail</span>
+          <input class="auth-form__input" name="email" id="regemail" placeholder="Введите почту" type="email" required>
+          <span class="auth-form__error auth-form__error_hide" id="error-regemail">Введите корректный адрес
+            e-mail</span>
+          <span class="auth-form__subtitle">Пароль</span>
+          <input class="auth-form__input" name="password" id="regpassword" type="password" placeholder="Введите пароль"
+            minlength="8" required>
+          <span class="auth-form__error auth-form__error_hide" id="error-regpassword">
+            Длина пароля должна быть 8 или более символов
+          </span>
+          <span class="auth-form__subtitle">Имя</span>
+          <input class="auth-form__input" name="username" id="regname" placeholder="Введите свое имя" required
+            minlength="2" pattern="[A-Za-zА-Яа-я]{2,}">
+          <span class="auth-form__error auth-form__error_hide" id="error-regname">
+            Имя должно и содержать только буквы
+          </span>
+          <span class="auth-form__error auth-form__error_usr-exists auth-form__error_hide" id="signup-fatal">
+            Такой пользователь уже есть
+          </span>
+          <button class="button auth-form__button" name="signup-button" type="submit">Зарегистрироваться</button>
+          <span class="auth-form__other-action">
+            или <span class="auth-form__other-action-click" id="open-login-form">Войти</span>
+          </span>
+        </form>
+      </section>
+
+      <section class="popup popup_hide" id="signup-ok">
+        <form class="auth-form" name="all good">
+          <div class="auth-form__close" id="close-signup-ok-form"></div>
+          <h4 class="auth-form__title">Пользователь успешно зарегистрирован!</h4>
+          <span class="auth-form__other-action auth-form__other-action_left">
+            <span class="auth-form__other-action-click" id="open-login-modal">Выполнить вход</span>
+          </span>
+        </form>
+      </section>
+      <!-- add class "overlay_on" to show overlay -->
+      <div class="overlay"></div>
+      <div class="sys-error" id="system-error">
+        <div class="sys-error__close"></div>
+        <p class="sys-error__message" id="system-error-message"></p>
+      </div>
     </div>
   </div>
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
+
+</html>

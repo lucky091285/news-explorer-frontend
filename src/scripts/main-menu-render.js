@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-export default class mainMenuRender {
+export default class MainMenuRender {
   constructor(loginFormOpen, logout, showError) {
     this.loginHandler = loginFormOpen;
     this.logoutHandler = logout;

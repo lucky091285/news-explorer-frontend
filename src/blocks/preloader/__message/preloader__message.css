@@ -1,3 +1,5 @@
+@import url(./_hide/preloader__message_hide.css);
+
 .preloader__message {
   display: flex;
   align-items: center;

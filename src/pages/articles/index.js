@@ -5,19 +5,19 @@ import './index.css';
 import config from '../../scripts/config';
 /* eslint-disable no-unused-vars */
 import { menuOperator, mainMenu } from '../../blocks/menu/menu';
-import initUI from '../../scripts/setup';
+import initInterface from '../../scripts/setup';
 import Collection from '../../scripts/collection';
 
-const pageUI = initUI();
+const widthWindow = 767;
+const pageInt = initInterface();
 
 const myCollection = new Collection(
-  pageUI.apiBackend.getAllArticles.bind(pageUI.apiBackend),
-  pageUI.apiBackend.deleteArticle.bind(pageUI.apiBackend),
+  pageInt.apiBackend.getAllArticles.bind(pageInt.apiBackend),
+  pageInt.apiBackend.deleteArticle.bind(pageInt.apiBackend),
   config,
-  pageUI.showError,
+  pageInt.showError,
 );
-// Methods
 
 window.onresize = () => {
-  if (window.innerWidth > 767) mainMenu.close();
+  if (window.innerWidth > widthWindow) mainMenu.close();
 };

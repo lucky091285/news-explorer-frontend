@@ -1,0 +1,22 @@
+.slider__subtitle {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #1a1b22;
+  margin-bottom: 71px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1279px) {
+  .slider__subtitle {
+    margin-bottom: 68px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider__subtitle {
+    display: none;
+  }
+}

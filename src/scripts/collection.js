@@ -1,3 +1,7 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable class-methods-use-this */
 export default class Collection {

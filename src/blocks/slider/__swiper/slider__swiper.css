@@ -12,6 +12,7 @@
 }
 
 .swiper-button-next {
+  top: 57.5%;
   width: 40px;
   height: 40px;
   background-image: url(../../../images/slider-arrows/slider-next.svg);
@@ -24,6 +25,7 @@
 }
 
 .swiper-button-prev {
+  top: 57.5%;
   width: 40px;
   height: 40px;
   background-image: url(../../../images/slider-arrows/slider-prev.svg);
